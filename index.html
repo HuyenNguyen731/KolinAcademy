@@ -19,10 +19,23 @@
         --black-color: #000;
         --transition: 0.3s all linear;
         --background-color: #0a0726;
+        --font-family: "HelveticaNeue";
       }
 
       * {
         box-sizing: inherit;
+      }
+
+      @font-face {
+        font-weight: 400;
+        font-family: "HelveticaNeue";
+        src: url(./font/HelveticaNeue-Medium.ttf);
+      }
+
+      @font-face {
+        font-weight: 600;
+        font-family: "HelveticaNeue";
+        src: url(./font/helveticaneuebold.ttf);
       }
 
       html,
@@ -32,11 +45,12 @@
             */
         /* font-size: 62.5%;
             line-height: 1.6rem; */
-        /* font-family: 'Roboto', sans-serif; */
-        box-sizing: border-box;
-        color: var(--white-color);
         padding: 0;
         margin: 0;
+        box-sizing: border-box;
+        color: var(--white-color);
+        font-family: var(--font-family);
+        font-size: 14px;
       }
 
       .container-app {
@@ -61,7 +75,7 @@
       .header-menu {
         display: flex;
         align-items: center;
-        padding: 30px;
+        padding: 40px;
       }
 
       .header-logo {
@@ -73,6 +87,9 @@
         justify-content: space-around;
         text-transform: uppercase;
         padding: 0 240px;
+        margin-bottom: 0;
+        font-size: 18px;
+        font-weight: 600;
       }
 
       .header-menu ul li {
@@ -98,15 +115,16 @@
       }
 
       .introduce-heading {
+        position: relative;
+        z-index: 1;
         display: flex;
         justify-content: center;
       }
 
       .introduce-heading h2 {
-        position: relative;
         padding: 6px 10px;
-        margin: 0 0 30px 0;
-        border-radius: 20px;
+        margin: 30px 0 40px;
+        border-radius: 50px;
         display: inline-block;
         text-transform: uppercase;
         border: 1px solid var(--white-color);
@@ -117,15 +135,19 @@
         );
       }
 
-      .introduce-heading h2::before {
+      .introduce-heading::before {
         position: absolute;
-        content: "GIOI THIEU";
+        z-index: -1;
+        content: "";
         color: transparent;
-        padding: 6px 10px;
-        border-radius: 20px;
-        top: 4px;
-        right: -2px;
-        border-bottom: 1px solid var(--white-color);
+        border-radius: 50px;
+        bottom: 32px;
+        font-size: 2rem;
+        width: 170px;
+        right: 50%;
+        transform: translateX(52%);
+        border: 1px solid var(--white-color);
+        height: 55px;
       }
 
       /* ==== tabs ===== */
@@ -140,7 +162,7 @@
       .btn-container {
         display: flex;
         justify-content: center;
-        gap: 30px;
+        gap: 25px;
         margin-bottom: 80px;
       }
 
@@ -148,7 +170,6 @@
         color: var(--primary-color);
         border: 1px solid var(--white-color);
         background: transparent;
-        text-transform: capitalize;
         font-size: 16px;
         padding: 5px 15px;
         cursor: pointer;
@@ -400,7 +421,7 @@
 
             <!-- content container -->
             <div class="about-content">
-              <div class="content" id="about">
+              <div class="content active" id="about">
                 <div class="content_about-kolin">
                   <div class="content_about-kolin-img-wrap">
                     <img
@@ -433,6 +454,7 @@
                     <li>Coaching trực tiếp, tư vấn và đồng hành</li>
                     <li>Tổ chức sự kiện/ workshop</li>
                   </ul>
+                  <br />
                   <p>
                     Với hơn 8000 học viên đã qua đào tạo đến từ khắp 3 miền trên
                     tổ quốc, Kolin Academy tự hào là đơn vị dẫn đầu về đào tạo
@@ -522,7 +544,7 @@
                   </div>
                 </div>
               </div>
-              <div class="content active" id="lecturer">
+              <div class="content" id="lecturer">
                 <div class="content_lecturer">
                   <div class="lecturer-item lecturer-item-left">
                     <h3>Vũ Diệu Thúy</h3>
@@ -662,29 +684,37 @@
           <div class="row g-2">
             <div class="col-4">
               <div class="p-3">
-                Custom column padding
+                <h2>KOLIN ACADEMY</h2>
+                <p>
+                  <strong>Địa chỉ: </strong> 110 Nguyễn Hy Quang, Ô Chợ Dừa,
+                  Đống Đa, Hà Nội'
+                </p>
+                <strong>Hotline: </strong>
+                0961.866.955
                 <br />
-                Custom column padding
                 <br />
-                Custom column padding
+                <br />
+                <p>© 2022KOLIN ACADEMY</p>
               </div>
             </div>
             <div class="col-4">
               <div class="p-3">
-                Custom column padding
-                <br />
-                Custom column padding
-                <br />
-                Custom column padding
+                <h2>KHÓA HỌC</h2>
+                <p>Brand Master</p>
+                <p>Personal brand pro</p>
+                <p>Pose</p>
+                <p>Livestream Master</p>
+                <p>Thần Thái - Khí Chất</p>
+                <p>Tiktok idol</p>
               </div>
             </div>
             <div class="col-4">
               <div class="p-3">
-                Custom column padding
-                <br />
-                Custom column padding
-                <br />
-                Custom column padding
+                <h2>THÔNG TIN LIÊN HỆ</h2>
+                <p>Về Kolin</p>
+                <p>Khóa học</p>
+                <p>Thư viện tài liệu</p>
+                <p>‣ Kiến thức</p>
               </div>
             </div>
           </div>
