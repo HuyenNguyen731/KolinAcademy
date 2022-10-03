@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      :root {
+        --primary-color: #00fbfb;
+        --secondary-color: #e300c8;
+        --white-color: #fff;
+        --black-color: #000;
+        --transition: 0.3s all linear;
+        --background-color: #0a0726;
+      }
+
+      * {
+        box-sizing: inherit;
+      }
+
+      html,
+      body {
+        /* 16px - 100%
+                1rem = 10px - 62.5%
+            */
+        /* font-size: 62.5%;
+            line-height: 1.6rem; */
+        /* font-family: 'Roboto', sans-serif; */
+        box-sizing: border-box;
+        color: var(--white-color);
+        padding: 0;
+        margin: 0;
+      }
+
+      .container-app {
+        position: relative;
+        background-color: var(--background-color);
+        overflow-x: hidden;
+      }
+
+      .container-img {
+        position: absolute;
+        bottom: -16%;
+        width: 100%;
+        display: none;
+        pointer-events: none;
+      }
+
+      /* ===== header ===== */
+
+      .header {
+      }
+
+      .header-menu {
+        display: flex;
+        align-items: center;
+        padding: 30px;
+      }
+
+      .header-logo {
+      }
+
+      .header-menu ul {
+        flex: 1;
+        display: flex;
+        justify-content: space-around;
+        text-transform: uppercase;
+        padding: 0 240px;
+      }
+
+      .header-menu ul li {
+        list-style: none;
+      }
+
+      .header-menu ul li a {
+        text-decoration: none;
+        color: var(--primary-color);
+        transition: var(--transition);
+      }
+
+      .header-menu ul li:hover a {
+        color: var(--secondary-color);
+      }
+
+      /* ===== introduce ===== */
+      .introduce {
+      }
+
+      .introduce-wrapper {
+        padding-bottom: 100px;
+      }
+
+      .introduce-heading {
+        display: flex;
+        justify-content: center;
+      }
+
+      .introduce-heading h2 {
+        position: relative;
+        padding: 6px 10px;
+        margin: 0 0 30px 0;
+        border-radius: 20px;
+        display: inline-block;
+        text-transform: uppercase;
+        border: 1px solid var(--white-color);
+        background-image: linear-gradient(
+          to right,
+          var(--secondary-color),
+          var(--primary-color)
+        );
+      }
+
+      .introduce-heading h2::before {
+        position: absolute;
+        content: "GIOI THIEU";
+        color: transparent;
+        padding: 6px 10px;
+        border-radius: 20px;
+        top: 4px;
+        right: -2px;
+        border-bottom: 1px solid var(--white-color);
+      }
+
+      /* ==== tabs ===== */
+
+      .about {
+        border-radius: 0.5rem;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        overflow: hidden;
+      }
+
+      .btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 80px;
+      }
+
+      .tab-btn {
+        color: var(--primary-color);
+        border: 1px solid var(--white-color);
+        background: transparent;
+        text-transform: capitalize;
+        font-size: 16px;
+        padding: 5px 15px;
+        cursor: pointer;
+        transition: var(--transition);
+        border-radius: 20px;
+      }
+
+      .tab-btn:hover:not(.active) {
+        color: var(--secondary-color);
+      }
+
+      .active {
+        color: var(--secondary-color);
+      }
+
+      .content.active {
+        color: var(--white-color);
+      }
+
+      .about-content {
+        padding: 32px 24px;
+        line-height: 1.4;
+        letter-spacing: 0.1px;
+        color: hsl(210deg 22% 49%);
+      }
+
+      .about-content h4 {
+        color: #102a42;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+        text-transform: capitalize;
+      }
+
+      .content {
+        display: none;
+      }
+
+      .content.active {
+        display: block;
+      }
+
+      .content_about-kolin {
+        position: relative;
+        padding: 40px;
+        border: 1px solid var(--primary-color);
+        border-top: none;
+        border-radius: 10px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .content_about-kolin ul {
+        margin: 0 30px;
+        padding-left: 28px;
+        border-left: 6px solid var(--primary-color);
+      }
+
+      .content_about-kolin-img {
+        position: absolute;
+        top: -85px;
+        right: 50%;
+        display: block;
+        padding: 0 15px;
+        /* background: var(--background-color); */
+        transform: translateX(50%) rotateZ(-4deg);
+      }
+
+      .content_about-kolin-img-wrap {
+        position: relative;
+        margin-bottom: 40px;
+      }
+
+      .content_about-kolin-img-wrap::after {
+        content: "";
+        position: absolute;
+        top: -40px;
+        right: -35px;
+        height: 1px;
+        width: 40%;
+        background-color: var(--primary-color);
+      }
+
+      .content_about-kolin-img-wrap::before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        left: -35px;
+        height: 1px;
+        width: 40%;
+        background-color: var(--primary-color);
+      }
+
+      .content_slogan {
+        padding: 40px;
+        border: 1px solid var(--primary-color);
+        border-radius: 10px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .content_slogan p {
+        position: relative;
+      }
+
+      .content_slogan-img {
+        display: block;
+        transform: rotateZ(-4deg);
+      }
+
+      .content_mission {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .content_mission-img {
+        transform: rotateZ(-4deg);
+      }
+
+      .content_mission p {
+        color: var(--white-color);
+        margin-left: 90px;
+      }
+
+      .content_lecturer {
+        display: grid;
+        place-content: center;
+      }
+
+      .lecturer-item {
+        position: relative;
+        width: 800px;
+        height: 450px;
+        padding: 20px;
+        background-color: #000;
+        margin-bottom: 100px;
+      }
+
+      .lecturer-item-left h3 {
+        position: absolute;
+        right: 20%;
+        top: 15%;
+        text-transform: uppercase;
+      }
+
+      .lecturer-item-right h3 {
+        position: absolute;
+        left: 20%;
+        top: 15%;
+        text-transform: uppercase;
+      }
+
+      .lecturer-item_bg {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      .lecturer-item_decor {
+        position: absolute;
+        width: 50%;
+      }
+
+      .lecturer-item_decor-left {
+        top: 0;
+        left: 0;
+      }
+
+      .lecturer-item_decor-right {
+        right: 28px;
+        top: 10%;
+      }
+
+      .lecturer-item_lecturer1 {
+        position: absolute;
+        bottom: 28px;
+        left: 80px;
+      }
+
+      .lecturer-item_lecturer2 {
+        position: absolute;
+        bottom: 29px;
+        right: 65px;
+      }
+
+      .lecturer-item_info1 {
+        position: absolute;
+        bottom: 20%;
+        right: 28px;
+      }
+
+      .lecturer-item_info2 {
+        position: absolute;
+        bottom: 15%;
+        left: 30px;
+      }
+
+      /* ==== footer ===== */
+      .footer {
+        position: relative;
+      }
+
+      .footer img {
+        width: 100%;
+      }
+
+      .footer-content {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-app">
+      <img src="./img/Frame.svg" alt="" class="container-img" />
+      <div class="header">
+        <div class="header-menu">
+          <div class="header-logo">
+            <img src="./img/logo.png" alt="" />
+          </div>
+          <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Về Kolin</a></li>
+            <li><a href="#">Khóa học</a></li>
+            <li><a href="#">Thư viện tài liệu</a></li>
+            <li><a href="#">Kiến thức</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ======= Trang giới thiệu ======= -->
+      <div class="introduce">
+        <div class="introduce-wrapper">
+          <div class="introduce-heading">
+            <h2>Giới thiệu</h2>
+          </div>
+          <article class="about">
+            <!-- button container -->
+            <div class="btn-container">
+              <button class="tab-btn active" data-id="about">Về Kolin</button>
+              <button class="tab-btn" data-id="slogan">
+                Triết lý kinh doanh
+              </button>
+              <button class="tab-btn" data-id="mission">
+                Tầm nhìn, sứ mệnh, giá trị cốt lõi
+              </button>
+              <button class="tab-btn" data-id="lecturer">Giảng viên</button>
+            </div>
+
+            <!-- content container -->
+            <div class="about-content">
+              <div class="content" id="about">
+                <div class="content_about-kolin">
+                  <div class="content_about-kolin-img-wrap">
+                    <img
+                      src="./img/KOLINACADEMY.png"
+                      alt=""
+                      class="content_about-kolin-img"
+                    />
+                  </div>
+                  <p>
+                    Tiền thân là học viện Nik Academy, Nay là Học Viện Đào Tạo
+                    KOL’s Kolin Academy
+                  </p>
+                  <p>
+                    Kolin Academy là đơn vị cung cấp giải pháp, định hướng xây
+                    dựng thương hiệu cá nhân cho các cá nhân, đội nhóm, doanh
+                    nghiệp thông qua các giải pháp:
+                  </p>
+                  <p></p>
+                  <ul>
+                    <li>
+                      Đào tạo và huấn luyện ngắn hạn về thương hiệu cá nhân, xác
+                      định hình tượng, định vị bản thân, lựa chọn kênh truyền
+                      thông, cách quay, dựng, sản xuất nội dung.
+                    </li>
+                    <li>
+                      Huấn luyện nội bộ, đào tạo nhân sự cho các tổ chức, công
+                      ty
+                    </li>
+                    <li>Lớp học trực tuyến Online Learning</li>
+                    <li>Coaching trực tiếp, tư vấn và đồng hành</li>
+                    <li>Tổ chức sự kiện/ workshop</li>
+                  </ul>
+                  <p>
+                    Với hơn 8000 học viên đã qua đào tạo đến từ khắp 3 miền trên
+                    tổ quốc, Kolin Academy tự hào là đơn vị dẫn đầu về đào tạo
+                    xây dựng thương hiệu cá nhân, giúp cho rất nhiều học viên,
+                    doanh nghiệp, tổ chức tìm ra được hình thức marketing mới
+                    thay thế cho tư duy marketing doanh nghiệp cũ kỹ, từ đó đem
+                    lại hiệu quả cực kỳ cao trong hệ thông kinh doanh của các cá
+                    nhân, doanh nghiệp
+                  </p>
+                </div>
+              </div>
+              <div class="content" id="slogan">
+                <div class="content_slogan">
+                  <p>
+                    <img
+                      src="./img/tienphong.png"
+                      alt=""
+                      class="content_slogan-img"
+                    />
+                  </p>
+                  <p style="left: 20%">
+                    <img
+                      src="./img/khacbiet.png"
+                      alt=""
+                      class="content_slogan-img"
+                    />
+                  </p>
+                  <p style="left: 40%">
+                    <img
+                      src="./img/hieuqua.png"
+                      alt=""
+                      class="content_slogan-img"
+                    />
+                  </p>
+                  <p style="left: 60%">
+                    <img
+                      src="./img/thuctien.png"
+                      alt=""
+                      class="content_slogan-img"
+                    />
+                  </p>
+                </div>
+              </div>
+              <div class="content" id="mission">
+                <div class="content_mission">
+                  <div>
+                    <img
+                      src="./img/tamnhin.png"
+                      alt=""
+                      class="content_mission-img"
+                    />
+                    <p>
+                      Trở thành đơn vị Đào tạo - Huấn Luyện - Tư vấn hàng đầu
+                      Việt Nam về xây dựng thương hiệu các nhân, phát triển con
+                      người, phát triển hệ thống, tổ chức
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      src="./img/sumenh.png"
+                      alt=""
+                      class="content_mission-img"
+                    />
+                    <p>
+                      Kolin Academy khát khao mang đến những đổi mới về hành
+                      trình xác nhận, xây dựng hình tượng bản thân cho mọi các
+                      nhân trên đất nước Việt Nam, thực hiện hoài bão xây dựng
+                      hình ảnh doanh nghiệp, tổ chức thông qua thương hiệu cá
+                      nhân.
+                    </p>
+                  </div>
+                  <div>
+                    <img
+                      src="./img/giatri.png"
+                      alt=""
+                      class="content_mission-img"
+                    />
+                    <p>
+                      Gia tăng giá trị khách hàng
+                      <br />
+                      Chính trực
+                      <br />
+                      Tân tâm
+                      <br />
+                      Học hổi và phát triển
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="content active" id="lecturer">
+                <div class="content_lecturer">
+                  <div class="lecturer-item lecturer-item-left">
+                    <h3>Vũ Diệu Thúy</h3>
+                    <img src="./img/bg.png" alt="" class="lecturer-item_bg" />
+                    <img
+                      src="./img/decor.png"
+                      alt=""
+                      class="lecturer-item_decor lecturer-item_decor-left"
+                    />
+                    <img
+                      src="./img/lecturer1.png"
+                      alt=""
+                      class="lecturer-item_lecturer1"
+                      style="width: 35%"
+                    />
+                    <img
+                      src="./img/info1.png"
+                      alt=""
+                      class="lecturer-item_info1"
+                    />
+                  </div>
+                  <div class="lecturer-item lecturer-item-right">
+                    <h3>Trần Việt Hoàng</h3>
+                    <img src="./img/bg.png" alt="" class="lecturer-item_bg" />
+                    <img
+                      src="./img/decor.png"
+                      alt=""
+                      class="lecturer-item_decor lecturer-item_decor-right"
+                    />
+                    <img
+                      src="./img/lecturer2.png"
+                      alt=""
+                      class="lecturer-item_lecturer2"
+                      style="width: 30%"
+                    />
+                    <img
+                      src="./img/info2.png"
+                      alt=""
+                      class="lecturer-item_info2"
+                    />
+                  </div>
+
+                  <div class="lecturer-item lecturer-item-left">
+                    <h3>Nguyễn Trần Bảo Ngọc</h3>
+                    <img src="./img/bg.png" alt="" class="lecturer-item_bg" />
+                    <img
+                      src="./img/decor.png"
+                      alt=""
+                      class="lecturer-item_decor lecturer-item_decor-left"
+                    />
+                    <img
+                      src="./img/lecturer3.png"
+                      alt=""
+                      class="lecturer-item_lecturer1"
+                      style="width: 26%"
+                    />
+                    <img
+                      src="./img/info3.png"
+                      alt=""
+                      class="lecturer-item_info1"
+                    />
+                  </div>
+
+                  <div class="lecturer-item lecturer-item-right">
+                    <h3>Vũ Trà My</h3>
+                    <img src="./img/bg.png" alt="" class="lecturer-item_bg" />
+                    <img
+                      src="./img/decor.png"
+                      alt=""
+                      class="lecturer-item_decor lecturer-item_decor-right"
+                    />
+                    <img
+                      src="./img/lecturer4.png"
+                      alt=""
+                      class="lecturer-item_lecturer2"
+                      style="width: 40%"
+                    />
+                    <img
+                      src="./img/info4.png"
+                      alt=""
+                      class="lecturer-item_info2"
+                      style="left: 65px"
+                    />
+                  </div>
+
+                  <div class="lecturer-item lecturer-item-left">
+                    <h3>Vũ Hoàng Diễm</h3>
+                    <img src="./img/bg.png" alt="" class="lecturer-item_bg" />
+                    <img
+                      src="./img/decor.png"
+                      alt=""
+                      class="lecturer-item_decor lecturer-item_decor-left"
+                    />
+                    <img
+                      src="./img/lecturer5.png"
+                      alt=""
+                      class="lecturer-item_lecturer1"
+                      style="width: 34%"
+                    />
+                    <img
+                      src="./img/info5.png"
+                      alt=""
+                      class="lecturer-item_info1"
+                    />
+                  </div>
+
+                  <div class="lecturer-item lecturer-item-right">
+                    <h3>Thái Thị Thanh Vy</h3>
+                    <img src="./img/bg.png" alt="" class="lecturer-item_bg" />
+                    <img
+                      src="./img/decor.png"
+                      alt=""
+                      class="lecturer-item_decor lecturer-item_decor-right"
+                    />
+                    <img
+                      src="./img/lecturer6.png"
+                      alt=""
+                      class="lecturer-item_lecturer2"
+                      style="width: 30%"
+                    />
+                    <img
+                      src="./img/info6.png"
+                      alt=""
+                      class="lecturer-item_info2"
+                      style="left: 65px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer-content">
+          <div class="row g-2">
+            <div class="col-4">
+              <div class="p-3">
+                Custom column padding
+                <br />
+                Custom column padding
+                <br />
+                Custom column padding
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="p-3">
+                Custom column padding
+                <br />
+                Custom column padding
+                <br />
+                Custom column padding
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="p-3">
+                Custom column padding
+                <br />
+                Custom column padding
+                <br />
+                Custom column padding
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="./img/footer.png" alt="decor-footer" />
+      </div>
+    </div>
+    <script>
+      const btns = document.querySelectorAll(".tab-btn");
+      const about = document.querySelector(".about");
+      const articles = document.querySelectorAll(".content");
+
+      about.addEventListener("click", function (e) {
+        const id = e.target.dataset.id;
+
+        if (e.target.dataset) {
+          btns.forEach(function (btn) {
+            btn.classList.remove("active");
+            e.target.classList.add("active");
+          });
+
+          articles.forEach(function (article) {
+            article.classList.remove("active");
+          });
+
+          const element = document.getElementById(id);
+          element.classList.add("active");
+        }
+      });
+    </script>
+  </body>
+</html>
