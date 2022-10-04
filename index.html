@@ -11,386 +11,60 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <style>
-      :root {
-        --primary-color: #00fbfb;
-        --secondary-color: #e300c8;
-        --white-color: #fff;
-        --black-color: #000;
-        --transition: 0.3s all linear;
-        --background-color: #0a0726;
-        --font-family: "HelveticaNeue";
-      }
-
-      * {
-        box-sizing: inherit;
-      }
-
-      @font-face {
-        font-weight: 400;
-        font-family: "HelveticaNeue";
-        src: url(./font/HelveticaNeue-Medium.ttf);
-      }
-
-      @font-face {
-        font-weight: 600;
-        font-family: "HelveticaNeue";
-        src: url(./font/helveticaneuebold.ttf);
-      }
-
-      html,
-      body {
-        /* 16px - 100%
-                1rem = 10px - 62.5%
-            */
-        /* font-size: 62.5%;
-            line-height: 1.6rem; */
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        color: var(--white-color);
-        font-family: var(--font-family);
-        font-size: 14px;
-      }
-
-      .container-app {
-        position: relative;
-        background-color: var(--background-color);
-        overflow-x: hidden;
-      }
-
-      .container-img {
-        position: absolute;
-        bottom: -16%;
-        width: 100%;
-        display: none;
-        pointer-events: none;
-      }
-
-      /* ===== header ===== */
-
-      .header {
-      }
-
-      .header-menu {
-        display: flex;
-        align-items: center;
-        padding: 40px;
-      }
-
-      .header-logo {
-      }
-
-      .header-menu ul {
-        flex: 1;
-        display: flex;
-        justify-content: space-around;
-        text-transform: uppercase;
-        padding: 0 240px;
-        margin-bottom: 0;
-        font-size: 18px;
-        font-weight: 600;
-      }
-
-      .header-menu ul li {
-        list-style: none;
-      }
-
-      .header-menu ul li a {
-        text-decoration: none;
-        color: var(--primary-color);
-        transition: var(--transition);
-      }
-
-      .header-menu ul li:hover a {
-        color: var(--secondary-color);
-      }
-
-      /* ===== introduce ===== */
-      .introduce {
-      }
-
-      .introduce-wrapper {
-        padding-bottom: 100px;
-      }
-
-      .introduce-heading {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-      }
-
-      .introduce-heading h2 {
-        padding: 6px 10px;
-        margin: 30px 0 40px;
-        border-radius: 50px;
-        display: inline-block;
-        text-transform: uppercase;
-        border: 1px solid var(--white-color);
-        background-image: linear-gradient(
-          to right,
-          var(--secondary-color),
-          var(--primary-color)
-        );
-      }
-
-      .introduce-heading::before {
-        position: absolute;
-        z-index: -1;
-        content: "";
-        color: transparent;
-        border-radius: 50px;
-        bottom: 32px;
-        font-size: 2rem;
-        width: 170px;
-        right: 50%;
-        transform: translateX(52%);
-        border: 1px solid var(--white-color);
-        height: 55px;
-      }
-
-      /* ==== tabs ===== */
-
-      .about {
-        border-radius: 0.5rem;
-        display: grid;
-        grid-template-rows: auto 1fr;
-        overflow: hidden;
-      }
-
-      .btn-container {
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        margin-bottom: 80px;
-      }
-
-      .tab-btn {
-        color: var(--primary-color);
-        border: 1px solid var(--white-color);
-        background: transparent;
-        font-size: 16px;
-        padding: 5px 15px;
-        cursor: pointer;
-        transition: var(--transition);
-        border-radius: 20px;
-      }
-
-      .tab-btn:hover:not(.active) {
-        color: var(--secondary-color);
-      }
-
-      .active {
-        color: var(--secondary-color);
-      }
-
-      .content.active {
-        color: var(--white-color);
-      }
-
-      .about-content {
-        padding: 32px 24px;
-        line-height: 1.4;
-        letter-spacing: 0.1px;
-        color: hsl(210deg 22% 49%);
-      }
-
-      .about-content h4 {
-        color: #102a42;
-        letter-spacing: 2px;
-        margin-bottom: 12px;
-        text-transform: capitalize;
-      }
-
-      .content {
-        display: none;
-      }
-
-      .content.active {
-        display: block;
-      }
-
-      .content_about-kolin {
-        position: relative;
-        padding: 40px;
-        border: 1px solid var(--primary-color);
-        border-top: none;
-        border-radius: 10px;
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-      .content_about-kolin ul {
-        margin: 0 30px;
-        padding-left: 28px;
-        border-left: 6px solid var(--primary-color);
-      }
-
-      .content_about-kolin-img {
-        position: absolute;
-        top: -85px;
-        right: 50%;
-        display: block;
-        padding: 0 15px;
-        /* background: var(--background-color); */
-        transform: translateX(50%) rotateZ(-4deg);
-      }
-
-      .content_about-kolin-img-wrap {
-        position: relative;
-        margin-bottom: 40px;
-      }
-
-      .content_about-kolin-img-wrap::after {
-        content: "";
-        position: absolute;
-        top: -40px;
-        right: -35px;
-        height: 1px;
-        width: 40%;
-        background-color: var(--primary-color);
-      }
-
-      .content_about-kolin-img-wrap::before {
-        content: "";
-        position: absolute;
-        top: -40px;
-        left: -35px;
-        height: 1px;
-        width: 40%;
-        background-color: var(--primary-color);
-      }
-
-      .content_slogan {
-        padding: 40px;
-        border: 1px solid var(--primary-color);
-        border-radius: 10px;
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-      .content_slogan p {
-        position: relative;
-      }
-
-      .content_slogan-img {
-        display: block;
-        transform: rotateZ(-4deg);
-      }
-
-      .content_mission {
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-      .content_mission-img {
-        transform: rotateZ(-4deg);
-      }
-
-      .content_mission p {
-        color: var(--white-color);
-        margin-left: 90px;
-      }
-
-      .content_lecturer {
-        display: grid;
-        place-content: center;
-      }
-
-      .lecturer-item {
-        position: relative;
-        width: 800px;
-        height: 450px;
-        padding: 20px;
-        background-color: #000;
-        margin-bottom: 100px;
-      }
-
-      .lecturer-item-left h3 {
-        position: absolute;
-        right: 20%;
-        top: 15%;
-        text-transform: uppercase;
-      }
-
-      .lecturer-item-right h3 {
-        position: absolute;
-        left: 20%;
-        top: 15%;
-        text-transform: uppercase;
-      }
-
-      .lecturer-item_bg {
-        display: block;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-      }
-
-      .lecturer-item_decor {
-        position: absolute;
-        width: 50%;
-      }
-
-      .lecturer-item_decor-left {
-        top: 0;
-        left: 0;
-      }
-
-      .lecturer-item_decor-right {
-        right: 28px;
-        top: 10%;
-      }
-
-      .lecturer-item_lecturer1 {
-        position: absolute;
-        bottom: 28px;
-        left: 80px;
-      }
-
-      .lecturer-item_lecturer2 {
-        position: absolute;
-        bottom: 29px;
-        right: 65px;
-      }
-
-      .lecturer-item_info1 {
-        position: absolute;
-        bottom: 20%;
-        right: 28px;
-      }
-
-      .lecturer-item_info2 {
-        position: absolute;
-        bottom: 15%;
-        left: 30px;
-      }
-
-      /* ==== footer ===== */
-      .footer {
-        position: relative;
-      }
-
-      .footer img {
-        width: 100%;
-      }
-
-      .footer-content {
-        max-width: 1000px;
-        margin: 0 auto;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container-app">
+      <!-- decor -->
       <img src="./img/Frame.svg" alt="" class="container-img" />
-      <div class="header">
-        <div class="header-menu">
-          <div class="header-logo">
+      <img
+        src="./img/decor1.png"
+        alt=""
+        class="decor"
+        style="top: 44px; width: 12%; left: 26%"
+      />
+      <img
+        src="./img/decor2.png"
+        alt=""
+        class="decor"
+        style="top: 235px; width: 12%; right: 12%"
+      />
+      <img
+        src="./img/decor1.png"
+        alt=""
+        class="decor"
+        style="top: 450px; width: 12%; left: 0"
+      />
+      <img
+        src="./img/decor1.png"
+        alt=""
+        class="decor"
+        style="top: 670px; width: 20%; right: 10%"
+      />
+      <img
+        src="./img/decor1.png"
+        alt=""
+        class="decor"
+        style="top: 888px; width: 14%; left: 20%"
+      />
+
+      <!------ header ------>
+      <nav>
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
             <img src="./img/logo.png" alt="" />
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
           </div>
-          <ul>
+
+          <!-- links -->
+          <ul class="links">
             <li><a href="#">Trang chủ</a></li>
             <li><a href="#">Về Kolin</a></li>
             <li><a href="#">Khóa học</a></li>
@@ -398,9 +72,9 @@
             <li><a href="#">Kiến thức</a></li>
           </ul>
         </div>
-      </div>
+      </nav>
 
-      <!-- ======= Trang giới thiệu ======= -->
+      <!------ Trang giới thiệu ------>
       <div class="introduce">
         <div class="introduce-wrapper">
           <div class="introduce-heading">
@@ -421,7 +95,7 @@
 
             <!-- content container -->
             <div class="about-content">
-              <div class="content active" id="about">
+              <div class="content" id="about">
                 <div class="content_about-kolin">
                   <div class="content_about-kolin-img-wrap">
                     <img
@@ -544,133 +218,377 @@
                   </div>
                 </div>
               </div>
-              <div class="content" id="lecturer">
+              <div class="content active" id="lecturer">
                 <div class="content_lecturer">
-                  <div class="lecturer-item lecturer-item-left">
+                  <div class="lecturer-item lecturer-item1">
                     <h3>Vũ Diệu Thúy</h3>
+                    <div class="info">
+                      <p>
+                        <img src="./img/list.png" alt="" />
+                        Founder Kolin Academy
+                      </p>
+                      <p style="margin-left: 1.5rem">
+                        <img src="./img/list.png" alt="" />
+                        TGD Venus’ secret
+                      </p>
+                      <p>
+                        <img src="./img/list.png" alt="" />
+                        Tiktoker 2m5 follower
+                      </p>
+                    </div>
+                    <div class="follow">
+                      <p>Follower</p>
+                      <div class="follow-list">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            width="18px"
+                          >
+                            <path
+                              d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+                              fill="#fff"
+                            />
+                          </svg>
+                          500K
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            width="19px"
+                          >
+                            <path
+                              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                              fill="#fff"
+                            />
+                          </svg>
+                          35K
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            width="16px"
+                          >
+                            <path
+                              d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                              fill="#fff"
+                            />
+                          </svg>
+                          2.5M
+                        </div>
+                      </div>
+                    </div>
                     <img src="./img/bg.png" alt="" class="lecturer-item_bg" />
                     <img
                       src="./img/decor.png"
                       alt=""
                       class="lecturer-item_decor lecturer-item_decor-left"
                     />
-                    <img
-                      src="./img/lecturer1.png"
-                      alt=""
-                      class="lecturer-item_lecturer1"
-                      style="width: 35%"
-                    />
-                    <img
-                      src="./img/info1.png"
-                      alt=""
-                      class="lecturer-item_info1"
-                    />
+                    <img src="./img/lecturer1.png" alt="" class="picture" />
                   </div>
-                  <div class="lecturer-item lecturer-item-right">
+
+                  <div class="lecturer-item lecturer-item2">
                     <h3>Trần Việt Hoàng</h3>
+                    <div class="info">
+                      <p>
+                        <img src="./img/list.png" alt="" />
+                        Diễn viên nam chính phim <br />
+                        đoạt giải “Bông Sen Bạc “ năm 2019
+                      </p>
+                      <p style="margin-left: 1rem">
+                        <img src="./img/list.png" alt="" />
+                        Diễn viên nam chính <br />
+                        đoạt giải “Cánh Diều Bạc “ năm 2020
+                      </p>
+                      <p style="margin-left: 0.5rem">
+                        <img src="./img/list.png" alt="" />
+                        Giám đốc TVH Media
+                      </p>
+                    </div>
+                    <div class="follow">
+                      <p>Follower</p>
+                      <div class="follow-list">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            width="18px"
+                          >
+                            <path
+                              d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+                              fill="#fff"
+                            />
+                          </svg>
+                          55K
+                        </div>
+
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            width="16px"
+                          >
+                            <path
+                              d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                              fill="#fff"
+                            />
+                          </svg>
+                          1M3
+                        </div>
+                      </div>
+                    </div>
                     <img src="./img/bg.png" alt="" class="lecturer-item_bg" />
                     <img
                       src="./img/decor.png"
                       alt=""
                       class="lecturer-item_decor lecturer-item_decor-right"
                     />
-                    <img
-                      src="./img/lecturer2.png"
-                      alt=""
-                      class="lecturer-item_lecturer2"
-                      style="width: 30%"
-                    />
-                    <img
-                      src="./img/info2.png"
-                      alt=""
-                      class="lecturer-item_info2"
-                    />
+                    <img src="./img/lecturer2.png" alt="" class="picture" />
                   </div>
 
-                  <div class="lecturer-item lecturer-item-left">
-                    <h3>Nguyễn Trần Bảo Ngọc</h3>
+                  <div class="lecturer-item lecturer-item3">
+                    <h3>
+                      Nguyễn Trần <br />
+                      Bảo Ngọc
+                    </h3>
+                    <div class="info">
+                      <p>
+                        <img src="./img/list.png" alt="" />
+                        C.E.O của Bảo Ngọc Aerobic
+                      </p>
+                      <p style="margin-left: 1.5rem">
+                        <img src="./img/list.png" alt="" />
+                        Founder của Bảo Ngọc Sport
+                      </p>
+                      <p>
+                        <img src="./img/list.png" alt="" />
+                        Giảng viên đào tạo các khóa HLV Chuyên Nghiệp:“có tâm-
+                        có tầmcó thương hiệu cá nhân” hàng đầu Việt Nam
+                      </p>
+                      <p>
+                        <img src="./img/list.png" alt="" />
+                        Hội nhóm Aerobic lớn nhất Việt Nam với gần 300.000 thành
+                        viên
+                      </p>
+                      <p>
+                        <img src="./img/list.png" alt="" />
+                        Sở hữu fanpage 1,3 triệu follow
+                      </p>
+                    </div>
+                    <div class="follow">
+                      <p>Follower</p>
+                      <div class="follow-list">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            width="19px"
+                          >
+                            <path
+                              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                              fill="#fff"
+                            />
+                          </svg>
+                          247K
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            width="16px"
+                          >
+                            <path
+                              d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                              fill="#fff"
+                            />
+                          </svg>
+                          350K
+                        </div>
+                      </div>
+                    </div>
                     <img src="./img/bg.png" alt="" class="lecturer-item_bg" />
                     <img
                       src="./img/decor.png"
                       alt=""
                       class="lecturer-item_decor lecturer-item_decor-left"
                     />
-                    <img
-                      src="./img/lecturer3.png"
-                      alt=""
-                      class="lecturer-item_lecturer1"
-                      style="width: 26%"
-                    />
-                    <img
-                      src="./img/info3.png"
-                      alt=""
-                      class="lecturer-item_info1"
-                    />
+                    <img src="./img/lecturer3.png" alt="" class="picture" />
                   </div>
 
-                  <div class="lecturer-item lecturer-item-right">
+                  <div class="lecturer-item lecturer-item4">
                     <h3>Vũ Trà My</h3>
+                    <div class="info">
+                      <p>
+                        <img src="./img/list.png" alt="" />
+                        7 năm kinh nghiệm về thời trang <br />
+                        và kinh doanh thời trang
+                      </p>
+                      <p style="margin-left: 1rem">
+                        <img src="./img/list.png" alt="" />
+                        Mẫu ảnh chuyên nghiệp<br />
+                        về chụp ,quay Lookbook
+                      </p>
+                      <p style="margin-left: 0.5rem">
+                        <img src="./img/list.png" alt="" />
+                        Hot TikToker 168k followers
+                      </p>
+                    </div>
+                    <div class="follow">
+                      <p>Follower</p>
+                      <div class="follow-list">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            width="18px"
+                          >
+                            <path
+                              d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+                              fill="#fff"
+                            />
+                          </svg>
+                          74K
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            width="18px"
+                          >
+                            <path
+                              d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+                              fill="#fff"
+                            />
+                          </svg>
+                          25K
+                        </div>
+
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            width="16px"
+                          >
+                            <path
+                              d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                              fill="#fff"
+                            />
+                          </svg>
+                          168K
+                        </div>
+                      </div>
+                    </div>
                     <img src="./img/bg.png" alt="" class="lecturer-item_bg" />
                     <img
                       src="./img/decor.png"
                       alt=""
                       class="lecturer-item_decor lecturer-item_decor-right"
                     />
-                    <img
-                      src="./img/lecturer4.png"
-                      alt=""
-                      class="lecturer-item_lecturer2"
-                      style="width: 40%"
-                    />
-                    <img
-                      src="./img/info4.png"
-                      alt=""
-                      class="lecturer-item_info2"
-                      style="left: 65px"
-                    />
+                    <img src="./img/lecturer4.png" alt="" class="picture" />
                   </div>
 
-                  <div class="lecturer-item lecturer-item-left">
+                  <div class="lecturer-item lecturer-item5">
                     <h3>Vũ Hoàng Diễm</h3>
+                    <div class="info">
+                      <p>
+                        <img src="./img/list.png" alt="" />
+                        Hoa khôi Đại học Kinh Tế - Tài Chính 2016
+                      </p>
+                      <p style="margin-left: 1.5rem">
+                        <img src="./img/list.png" alt="" />
+                        3 năm kinh nghiệm kinh doanh thời trang thiết kế.
+                      </p>
+                      <p>
+                        <img src="./img/list.png" alt="" />
+                        3 năm kinh nghiệm về mẫu ảnh, <br />livestream, đang
+                        cộng tác với nhiều brand thời trang: Hnoss, Juno, Marc
+                        Fashion, Dottie,…
+                      </p>
+                    </div>
+                    <div class="follow">
+                      <p>Follower</p>
+                      <div class="follow-list">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            width="19px"
+                          >
+                            <path
+                              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                              fill="#fff"
+                            />
+                          </svg>
+                          247K
+                        </div>
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            width="16px"
+                          >
+                            <path
+                              d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                              fill="#fff"
+                            />
+                          </svg>
+                          350K
+                        </div>
+                      </div>
+                    </div>
                     <img src="./img/bg.png" alt="" class="lecturer-item_bg" />
                     <img
                       src="./img/decor.png"
                       alt=""
                       class="lecturer-item_decor lecturer-item_decor-left"
                     />
-                    <img
-                      src="./img/lecturer5.png"
-                      alt=""
-                      class="lecturer-item_lecturer1"
-                      style="width: 34%"
-                    />
-                    <img
-                      src="./img/info5.png"
-                      alt=""
-                      class="lecturer-item_info1"
-                    />
+                    <img src="./img/lecturer5.png" alt="" class="picture" />
                   </div>
 
-                  <div class="lecturer-item lecturer-item-right">
+                  <div class="lecturer-item lecturer-item6">
                     <h3>Thái Thị Thanh Vy</h3>
+                    <div class="info">
+                      <p>
+                        <img src="./img/list.png" alt="" />
+                        Kinh doanh chuỗi cửa hàng <br />
+                        thời trang tại HCM
+                      </p>
+                      <p style="margin-left: 1rem">
+                        <img src="./img/list.png" alt="" />
+                        Từng làm quản lý tài năng trẻ
+                      </p>
+                      <p style="margin-left: 0.5rem">
+                        <img src="./img/list.png" alt="" />
+                        Hiện làm mẫu ảnh tự do tại HCM
+                      </p>
+                    </div>
+                    <div class="follow">
+                      <p>Follower</p>
+                      <div class="follow-list">
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                            width="18px"
+                          >
+                            <path
+                              d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
+                              fill="#fff"
+                            />
+                          </svg>
+                          74K
+                        </div>
+                      </div>
+                    </div>
                     <img src="./img/bg.png" alt="" class="lecturer-item_bg" />
                     <img
                       src="./img/decor.png"
                       alt=""
                       class="lecturer-item_decor lecturer-item_decor-right"
                     />
-                    <img
-                      src="./img/lecturer6.png"
-                      alt=""
-                      class="lecturer-item_lecturer2"
-                      style="width: 30%"
-                    />
-                    <img
-                      src="./img/info6.png"
-                      alt=""
-                      class="lecturer-item_info2"
-                      style="left: 65px"
-                    />
+                    <img src="./img/lecturer6.png" alt="" class="picture" />
                   </div>
                 </div>
               </div>
@@ -679,42 +597,49 @@
         </div>
       </div>
 
+      <!------ footer ------>
       <div class="footer">
         <div class="footer-content">
           <div class="row g-2">
-            <div class="col-4">
+            <div class="col-xl-4 col-md-12">
               <div class="p-3">
                 <h2>KOLIN ACADEMY</h2>
+                <br />
                 <p>
                   <strong>Địa chỉ: </strong> 110 Nguyễn Hy Quang, Ô Chợ Dừa,
                   Đống Đa, Hà Nội'
                 </p>
                 <strong>Hotline: </strong>
                 0961.866.955
-                <br />
-                <br />
-                <br />
-                <p>© 2022KOLIN ACADEMY</p>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-xl-4 col-md-12">
               <div class="p-3">
                 <h2>KHÓA HỌC</h2>
-                <p>Brand Master</p>
-                <p>Personal brand pro</p>
-                <p>Pose</p>
-                <p>Livestream Master</p>
-                <p>Thần Thái - Khí Chất</p>
-                <p>Tiktok idol</p>
+                <br />
+                <p>‣ Brand Master</p>
+                <p>‣ Personal brand pro</p>
+                <p>‣ Pose</p>
+                <p>‣ Livestream Master</p>
+                <p>‣ Thần Thái - Khí Chất</p>
+                <p>‣ Tiktok idol</p>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-xl-4 col-md-12">
               <div class="p-3">
                 <h2>THÔNG TIN LIÊN HỆ</h2>
-                <p>Về Kolin</p>
-                <p>Khóa học</p>
-                <p>Thư viện tài liệu</p>
+                <br />
+                <p>‣ Về Kolin</p>
+                <p>‣ Khóa học</p>
+                <p>‣ Thư viện tài liệu</p>
                 <p>‣ Kiến thức</p>
+              </div>
+            </div>
+          </div>
+          <div class="row g-2">
+            <div class="col-12">
+              <div class="p-3">
+                <p>© 2022KOLIN ACADEMY</p>
               </div>
             </div>
           </div>
@@ -722,7 +647,15 @@
         <img src="./img/footer.png" alt="decor-footer" />
       </div>
     </div>
+
     <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const links = document.querySelector(".links");
+
+      navToggle.addEventListener("click", function () {
+        links.classList.toggle("show-links");
+      });
+
       const btns = document.querySelectorAll(".tab-btn");
       const about = document.querySelector(".about");
       const articles = document.querySelectorAll(".content");
