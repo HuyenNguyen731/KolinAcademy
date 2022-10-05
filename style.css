@@ -144,10 +144,7 @@ a {
 /* ==== tabs ===== */
 
 .about {
-  border-radius: 0.5rem;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  overflow: hidden;
+  display: block;
 }
 
 .btn-container {
@@ -172,19 +169,11 @@ a {
   color: var(--secondary-color);
 }
 
-.active {
-  color: var(--secondary-color);
-}
-
-.content.active {
-  color: var(--white-color);
-}
-
 .about-content {
   padding: 32px 24px;
   line-height: 1.4;
   letter-spacing: 0.1px;
-  color: hsl(210deg 22% 49%);
+  color: white;
 }
 
 .about-content h4 {
@@ -194,15 +183,14 @@ a {
   text-transform: capitalize;
 }
 
-.content {
+.active {
+  color: var(--secondary-color);
+}
+
+.about-content .content:not(:first-of-type) {
   display: none;
 }
 
-.content.active {
-  display: block;
-}
-
-/* ====== content ===== */
 .content_about-kolin {
   position: relative;
   padding: 40px;

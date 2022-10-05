@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body>
     <div class="container-app">
@@ -79,7 +80,6 @@
         </div>
       </nav>
 
-      <!------ Trang giới thiệu ------>
       <div class="introduce">
         <div class="introduce-wrapper">
           <div class="introduce-heading">
@@ -88,19 +88,21 @@
           <article class="about">
             <!-- button container -->
             <div class="btn-container">
-              <button class="tab-btn active" data-id="about">Về Kolin</button>
-              <button class="tab-btn" data-id="slogan">
+              <button class="tab-btn active" data-value=".about">
+                Về Kolin
+              </button>
+              <button class="tab-btn" data-value=".slogan">
                 Triết lý kinh doanh
               </button>
-              <button class="tab-btn" data-id="mission">
+              <button class="tab-btn" data-value=".mission">
                 Tầm nhìn, sứ mệnh, giá trị cốt lõi
               </button>
-              <button class="tab-btn" data-id="lecturer">Giảng viên</button>
+              <button class="tab-btn" data-value=".lecturer">Giảng viên</button>
             </div>
 
             <!-- content container -->
             <div class="about-content">
-              <div class="content active" id="about">
+              <div class="content about">
                 <div class="content_about-kolin">
                   <div class="content_about-kolin-img-wrap">
                     <img
@@ -145,7 +147,7 @@
                   </p>
                 </div>
               </div>
-              <div class="content" id="slogan">
+              <div class="content slogan">
                 <div class="content_slogan">
                   <p>
                     <img
@@ -177,7 +179,7 @@
                   </p>
                 </div>
               </div>
-              <div class="content" id="mission">
+              <div class="content mission">
                 <div class="content_mission">
                   <div>
                     <img
@@ -223,7 +225,7 @@
                   </div>
                 </div>
               </div>
-              <div class="content" id="lecturer">
+              <div class="content lecturer">
                 <div class="content_lecturer">
                   <div class="lecturer-item lecturer-item1">
                     <h3>Vũ Diệu Thúy</h3>
@@ -651,37 +653,25 @@
         </div>
         <img src="./img/footer.png" alt="decor-footer" />
       </div>
+
+      <script>
+        // tabs
+        $(document).ready(function () {
+          $(".btn-container .tab-btn").click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+            $(".about-content > .content").hide();
+            $($(this).data("value")).fadeIn();
+          });
+        });
+
+        // toggle
+        const navToggle = document.querySelector(".nav-toggle");
+        const links = document.querySelector(".links");
+
+        navToggle.addEventListener("click", function () {
+          links.classList.toggle("show-links");
+        });
+      </script>
     </div>
-
-    <script>
-      const navToggle = document.querySelector(".nav-toggle");
-      const links = document.querySelector(".links");
-
-      navToggle.addEventListener("click", function () {
-        links.classList.toggle("show-links");
-      });
-
-      const btns = document.querySelectorAll(".tab-btn");
-      const about = document.querySelector(".about");
-      const articles = document.querySelectorAll(".content");
-
-      about.addEventListener("click", function (e) {
-        const id = e.target.dataset.id;
-
-        if (e.target.dataset) {
-          btns.forEach(function (btn) {
-            btn.classList.remove("active");
-            e.target.classList.add("active");
-          });
-
-          articles.forEach(function (article) {
-            article.classList.remove("active");
-          });
-
-          const element = document.getElementById(id);
-          element.classList.add("active");
-        }
-      });
-    </script>
   </body>
 </html>
