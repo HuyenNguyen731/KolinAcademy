@@ -270,6 +270,18 @@ a {
   transform: rotateZ(-4deg);
 }
 
+.content_slogan p:nth-child(2) {
+  left: 20%;
+}
+
+.content_slogan p:nth-child(3) {
+  left: 40%;
+}
+
+.content_slogan p:nth-child(4) {
+  left: 60%;
+}
+
 .content_mission {
   max-width: 900px;
   margin: 0 auto;
@@ -597,6 +609,18 @@ a {
     width: 225px;
   }
 
+  .content_slogan p:nth-child(2) {
+    left: 15%;
+  }
+
+  .content_slogan p:nth-child(3) {
+    left: 35%;
+  }
+
+  .content_slogan p:nth-child(4) {
+    left: 55%;
+  }
+
   .lecturer-item_bg {
     height: 94%;
   }
@@ -618,6 +642,10 @@ a {
   }
 
   /* ------- footer ------- */
+  .footer {
+    margin-top: 6rem;
+  }
+
   .footer-content h2 {
     font-size: 22px;
   }
@@ -669,6 +697,22 @@ a {
 
   .content_slogan {
     padding: 20px;
+  }
+
+  .content_slogan p:nth-child(1) img {
+    width: 99%;
+  }
+
+  .content_slogan p:nth-child(2) img,
+  .content_slogan p:nth-child(3) img,
+  .content_slogan p:nth-child(4) img {
+    width: 89%;
+  }
+
+  .content_slogan p:nth-child(2),
+  .content_slogan p:nth-child(3),
+  .content_slogan p:nth-child(4) {
+    left: 0;
   }
 
   .about-content {

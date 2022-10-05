@@ -11,10 +11,6 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -49,7 +45,7 @@
         src="./img/decor1.png"
         alt=""
         class="decor"
-        style="top: 888px; width: 14%; left: 20%"
+        style="top: 725px; width: 14%; left: 20%"
       />
 
       <!------ header ------>
@@ -59,7 +55,16 @@
           <div class="nav-header">
             <img src="./img/logo.png" alt="" />
             <button class="nav-toggle">
-              <i class="fas fa-bars"></i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="24px"
+              >
+                <path
+                  fill="#00fbfb"
+                  d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                />
+              </svg>
             </button>
           </div>
 
@@ -95,7 +100,7 @@
 
             <!-- content container -->
             <div class="about-content">
-              <div class="content" id="about">
+              <div class="content active" id="about">
                 <div class="content_about-kolin">
                   <div class="content_about-kolin-img-wrap">
                     <img
@@ -149,21 +154,21 @@
                       class="content_slogan-img"
                     />
                   </p>
-                  <p style="left: 20%">
+                  <p>
                     <img
                       src="./img/khacbiet.png"
                       alt=""
                       class="content_slogan-img"
                     />
                   </p>
-                  <p style="left: 40%">
+                  <p>
                     <img
                       src="./img/hieuqua.png"
                       alt=""
                       class="content_slogan-img"
                     />
                   </p>
-                  <p style="left: 60%">
+                  <p>
                     <img
                       src="./img/thuctien.png"
                       alt=""
@@ -218,7 +223,7 @@
                   </div>
                 </div>
               </div>
-              <div class="content active" id="lecturer">
+              <div class="content" id="lecturer">
                 <div class="content_lecturer">
                   <div class="lecturer-item lecturer-item1">
                     <h3>Vũ Diệu Thúy</h3>
