@@ -359,6 +359,11 @@ iframe {
   bottom: 25%;
 }
 
+.knowledge .heading {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
 @media only screen and (max-width: 1160px) {
   /* about us*/
   .home-about_wrapper {
