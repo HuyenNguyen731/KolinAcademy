@@ -362,6 +362,10 @@ iframe {
 .knowledge .heading {
   font-size: 16px;
   margin-bottom: 6px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 @media only screen and (max-width: 1160px) {
@@ -432,6 +436,7 @@ iframe {
   }
 
   .course-item {
+    border-radius: 8px;
     font-size: 13px;
     font-weight: 300;
     padding: 0.5rem 1.5rem;
@@ -465,6 +470,10 @@ iframe {
     margin: 20px 0 0;
   }
 
+  .course-online button {
+    border-radius: 8px;
+  }
+
   .course-offline-decor {
     top: -4%;
     left: -60px;
@@ -484,6 +493,10 @@ iframe {
     font-size: 16px;
   }
 
+  .course-offline .text button {
+    border-radius: 8px;
+  }
+
   /* feedback */
   .feedback .course {
     padding: 20px;
@@ -500,6 +513,11 @@ iframe {
   .feedback .name-student {
     font-size: 14px;
     text-align: right;
+  }
+
+  .feedback .see-more,
+  .knowledge .see-more {
+    border-radius: 8px;
   }
 
   /* knowledge */
