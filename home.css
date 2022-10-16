@@ -8,8 +8,12 @@
   --font-family: "HelveticaNeue";
 }
 
-section {
-  margin-bottom: 2rem;
+.home-page section {
+  margin-bottom: 6rem;
+}
+
+.home-page {
+  overflow: hidden;
 }
 
 /* banner */
@@ -43,6 +47,12 @@ section {
 
 .title {
   font-size: 32px;
+}
+
+.coming-soon-decor {
+  right: 0;
+  bottom: -14%;
+  pointer-events: none;
 }
 
 .coming-soon_course {
@@ -97,6 +107,18 @@ section {
 
 /* About us*/
 
+.home-about {
+  z-index: 1;
+}
+
+.home-about-decor1 {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  object-fit: cover;
+  bottom: -54%;
+}
+
 .home-about_wrapper {
   height: 728px;
   padding: 30px 60px;
@@ -119,7 +141,7 @@ iframe {
 }
 
 .course-online .video {
-  height: 215px;
+  height: 280px;
 }
 
 .course-online .text {
@@ -142,6 +164,16 @@ iframe {
 }
 
 /* course offline */
+.course-offline {
+  z-index: 1;
+}
+
+.course-offline-decor {
+  z-index: -1;
+  right: -395px;
+  top: -17%;
+}
+
 .course-offline .content {
   padding: 30px 40px;
 }
@@ -175,6 +207,10 @@ iframe {
 .feedback {
   padding: 50px 0;
   background-color: #270864;
+  background-image: url("./img/bg_feedback.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .feedback .name-course {
@@ -264,14 +300,29 @@ iframe {
 }
 
 /* knowledge */
-
 .content {
   padding: 30px 60px;
 }
 
 .content-wrapper {
   gap: 1rem;
-  margin-bottom: 18px;
+  margin-bottom: 30px;
+}
+
+.content-wrapper .img {
+  max-width: 40%;
+  width: 100%;
+}
+
+.content-wrapper .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-wrapper .text {
+  max-width: 60%;
+  width: 100%;
 }
 
 .knowledge .btn-details::after {
@@ -283,6 +334,29 @@ iframe {
   height: 2px;
   background-color: #fff;
   transform: translateY(50%);
+}
+
+.knowledge .disc {
+  max-height: 300%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.knowledge .see-more {
+  border-radius: 20px;
+  padding: 2px 14px;
+}
+
+.knowledge .decor-left {
+  top: -25%;
+  left: -5%;
+}
+
+.knowledge .decor-right {
+  right: -5%;
+  bottom: 25%;
 }
 
 @media only screen and (max-width: 1160px) {
@@ -300,9 +374,18 @@ iframe {
   .feedback .video {
     height: 280px;
   }
+
+  .knowledge .decor-left,
+  .knowledge .decor-right {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 767px) {
+  .home-page section {
+    margin-bottom: 3rem;
+  }
+
   /* Banner */
   .banner-container > div {
     flex-direction: column;
@@ -327,6 +410,11 @@ iframe {
 
   .title {
     font-size: 17px;
+  }
+
+  .coming-soon-decor {
+    bottom: -8%;
+    width: 28%;
   }
 
   .coming-soon_course {
@@ -360,12 +448,22 @@ iframe {
     padding: 20px;
   }
 
+  .course-online .video {
+    height: 210px;
+  }
+
   .course-online .text .name-course {
     font-size: 16px;
   }
 
   .course-online .text {
     margin: 20px 0 0;
+  }
+
+  .course-offline-decor {
+    top: -4%;
+    left: -60px;
+    width: 68%;
   }
 
   /* course offline */
@@ -396,5 +494,15 @@ iframe {
 
   .feedback .name-student {
     font-size: 14px;
+    text-align: right;
+  }
+
+  /* knowledge */
+  .knowledge .content {
+    padding: 20px;
+  }
+
+  .knowledge .btn-details img {
+    width: 20px;
   }
 }
