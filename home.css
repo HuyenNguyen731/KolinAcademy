@@ -66,6 +66,12 @@
   color: var(--white-color);
 }
 
+.coming-content {
+  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+}
+
 .coming-content .name {
   display: inline-block;
   position: relative;
@@ -138,6 +144,12 @@ iframe {
 /* course online */
 .course-online {
   padding: 30px 60px;
+}
+
+.course-online_content {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
 }
 
 .course-online .video {
@@ -417,6 +429,11 @@ iframe {
     padding-top: 38px;
   }
 
+  .coming-content {
+    gap: 0;
+    grid-template-columns: 1fr;
+  }
+
   .title {
     font-size: 17px;
   }
@@ -456,6 +473,11 @@ iframe {
   /* course online */
   .course-online {
     padding: 20px;
+  }
+
+  .course-online_content {
+    gap: 0;
+    grid-template-columns: 1fr;
   }
 
   .course-online .video {
