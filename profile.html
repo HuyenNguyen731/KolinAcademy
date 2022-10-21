@@ -12,103 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="main.css" />
-    <!-- <link rel="stylesheet" href="profile.css" /> -->
-    <style>
-      /* tabs */
-      .about {
-        display: block;
-      }
-
-      .tab-btn {
-        border: none;
-        font-size: 16px;
-        text-align: left;
-        padding: 3px 15px;
-        background: transparent;
-        color: var(--primary-color);
-        transition: var(--transition);
-        border-bottom: 1px solid var(--white-color);
-      }
-
-      .tab-btn:hover:not(.active) {
-        color: var(--secondary-color);
-      }
-
-      .active {
-        color: var(--secondary-color);
-      }
-
-      .about-content .content:not(:first-of-type) {
-        display: none;
-      }
-
-      .profile-container {
-        padding: 100px;
-      }
-
-      .btn-container,
-      .about-content {
-        padding: 0 20px;
-      }
-
-      .btn-primary {
-        padding: 6px 20px;
-        border-radius: 20px;
-        border-color: var(--secondary-color);
-        background-color: var(--secondary-color);
-      }
-
-      .form-control {
-        border-radius: 0.5rem;
-      }
-
-      .info .btn-primary:hover {
-        opacity: 0.8;
-        border-color: var(--secondary-color);
-        background-color: var(--secondary-color);
-      }
-
-      /* avatar */
-      .profile-pic {
-        width: 200px;
-        max-height: 200px;
-        display: inline-block;
-      }
-
-      .file-upload {
-        display: none;
-      }
-      .circle {
-        width: 128px;
-        height: 128px;
-        margin: 0 auto;
-        overflow: hidden;
-        border-radius: 100% !important;
-        border: 2px solid rgba(255, 255, 255, 0.2);
-      }
-      img {
-        height: auto;
-        max-width: 100%;
-      }
-      .p-image {
-        top: 95px;
-        right: 38%;
-        color: #666666;
-        position: absolute;
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-      .p-image:hover {
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-      .upload-button {
-        font-size: 1.2em;
-      }
-
-      .upload-button:hover {
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        color: #999;
-      }
-    </style>
+    <link rel="stylesheet" href="profile.css" />
   </head>
   <body>
     <!------ header ------>
@@ -250,35 +154,31 @@
                     <div class="row">
                       <div class="col-6">
                         <div class="content">
-                          <div class="content-img">
+                          <div class="thumb">
                             <img
                               src="./img/knowledge.png"
                               alt=""
                               class="w-full"
                             />
                           </div>
-                          <div
-                            class="content-text d-flex justify-content-between"
-                          >
+                          <div class="text d-flex justify-content-between">
                             <p class="name">Livestream Master Online</p>
-                            <a class="link secondary-color">Vào học</a>
+                            <a href="#" class="link secondary-color">Vào học</a>
                           </div>
                         </div>
                       </div>
                       <div class="col-6">
                         <div class="content">
-                          <div class="content-img">
+                          <div class="thumb">
                             <img
                               src="./img/knowledge.png"
                               alt=""
                               class="w-full"
                             />
                           </div>
-                          <div
-                            class="content-text d-flex justify-content-between"
-                          >
-                            <p>Livestream Master Online</p>
-                            <p class="secondary-color">Vào học</p>
+                          <div class="text d-flex justify-content-between">
+                            <p class="name">Livestream Master Online</p>
+                            <a href="#" class="link secondary-color">Vào học</a>
                           </div>
                         </div>
                       </div>
@@ -290,53 +190,52 @@
                     <div class="row">
                       <div class="col-6">
                         <div class="content">
-                          <div class="content-img">
+                          <div class="thumb">
                             <img
                               src="./img/knowledge.png"
                               alt=""
                               class="w-full"
                             />
                           </div>
-                          <div
-                            class="content-text d-flex justify-content-between"
-                          >
-                            <p>Livestream Master Online</p>
-                            <p class="secondary-color">Hoàn thành</p>
+                          <div class="text d-flex justify-content-between">
+                            <p class="name">Livestream Master Online</p>
+                            <a href="#" class="link secondary-color"
+                              >Hoàn thành</a
+                            >
                           </div>
                         </div>
                       </div>
                       <div class="col-6">
                         <div class="content">
-                          <div class="content-img">
+                          <div class="thumb">
                             <img
                               src="./img/knowledge.png"
                               alt=""
                               class="w-full"
                             />
                           </div>
-                          <div
-                            class="content-text d-flex justify-content-between"
-                          >
-                            <p>Livestream Master Online</p>
-                            <p class="secondary-color">Sắp tới 08.08.2020</p>
+                          <div class="text d-flex justify-content-between">
+                            <p class="name">Livestream Master Online</p>
+                            <a href="#" class="link secondary-color"
+                              >Sắp tới 08.08.2020</a
+                            >
                           </div>
                         </div>
                       </div>
-
                       <div class="col-6">
                         <div class="content">
-                          <div class="content-img">
+                          <div class="thumb">
                             <img
                               src="./img/knowledge.png"
                               alt=""
                               class="w-full"
                             />
                           </div>
-                          <div
-                            class="content-text d-flex justify-content-between"
-                          >
-                            <p>Livestream Master Online</p>
-                            <p class="secondary-color">Liên hệ xếp lớp</p>
+                          <div class="text d-flex justify-content-between">
+                            <p class="name">Livestream Master Online</p>
+                            <a href="#" class="link secondary-color"
+                              >Liên hệ xếp lớp</a
+                            >
                           </div>
                         </div>
                       </div>

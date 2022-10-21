@@ -1,3 +1,4 @@
+/* avatar */
 .profile-pic {
   width: 200px;
   max-height: 200px;
@@ -24,18 +25,11 @@ img {
   right: 38%;
   color: #666666;
   position: absolute;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.p-image:hover {
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.upload-button {
-  font-size: 1.2em;
 }
 
 .upload-button:hover {
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  color: #999;
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 /* tabs */
@@ -44,13 +38,13 @@ img {
 }
 
 .tab-btn {
-  color: var(--primary-color);
-  background: transparent;
-  font-size: 16px;
-  padding: 3px 15px;
-  transition: var(--transition);
   border: none;
+  font-size: 18px;
   text-align: left;
+  padding: 3px 15px;
+  background: transparent;
+  color: var(--primary-color);
+  transition: var(--transition);
   border-bottom: 1px solid var(--white-color);
 }
 
@@ -75,6 +69,7 @@ img {
   padding: 0 20px;
 }
 
+/* form */
 .btn-primary {
   padding: 6px 20px;
   border-radius: 20px;
@@ -92,32 +87,44 @@ img {
   background-color: var(--secondary-color);
 }
 
-/* content your course */
+/* course */
 .course-item {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .course-item .content {
-  margin-bottom: 30px;
+  padding: 10px;
 }
 
 .course-item h3 {
-  margin-bottom: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
 }
-.course-item .content-text {
+
+.course-item .content .text {
   margin-top: 10px;
 }
 
+.course-item .text .name,
+.course-item .text .link {
+  font-size: 17px;
+}
+
+.course-item .text .link:hover {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+/* history */
+.history h3 {
+  font-size: 18px;
+}
+
 .history ul {
-  padding-left: 0;
-  margin-top: 20px;
+  padding-left: 10px;
 }
 
 .history ul li {
-  padding: 5px 0;
   border-bottom: 1px solid #fff;
-}
-
-.history ul li:first-child {
-  border-top: 1px solid #fff;
+  padding: 6px 0;
 }
