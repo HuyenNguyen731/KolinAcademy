@@ -5,14 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <link
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css"
-      rel="stylesheet"
-    /> -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,62 +12,21 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="main.css" />
-
+    <!-- <link rel="stylesheet" href="profile.css" /> -->
     <style>
-      .profile-pic {
-        width: 200px;
-        max-height: 200px;
-        display: inline-block;
-      }
-
-      .file-upload {
-        display: none;
-      }
-      .circle {
-        border-radius: 100% !important;
-        overflow: hidden;
-        width: 128px;
-        height: 128px;
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        position: absolute;
-        top: 72px;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-      .p-image {
-        position: absolute;
-        top: 167px;
-        right: 30px;
-        color: #666666;
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-      .p-image:hover {
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-      .upload-button {
-        font-size: 1.2em;
-      }
-
-      .upload-button:hover {
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        color: #999;
-      }
-
       /* tabs */
       .about {
         display: block;
       }
 
       .tab-btn {
-        color: var(--primary-color);
-        background: transparent;
-        font-size: 16px;
-        padding: 3px 15px;
-        transition: var(--transition);
         border: none;
+        font-size: 16px;
         text-align: left;
+        padding: 3px 15px;
+        background: transparent;
+        color: var(--primary-color);
+        transition: var(--transition);
         border-bottom: 1px solid var(--white-color);
       }
 
@@ -111,57 +62,92 @@
         border-radius: 0.5rem;
       }
 
-      .course-item {
-        margin-bottom: 30px;
+      .info .btn-primary:hover {
+        opacity: 0.8;
+        border-color: var(--secondary-color);
+        background-color: var(--secondary-color);
       }
 
-      .course-item .content {
-        margin-bottom: 30px;
+      /* avatar */
+      .profile-pic {
+        width: 200px;
+        max-height: 200px;
+        display: inline-block;
       }
 
-      .course-item h3 {
-        margin-bottom: 10px;
+      .file-upload {
+        display: none;
       }
-      .course-item .content-text {
-        margin-top: 10px;
+      .circle {
+        width: 128px;
+        height: 128px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 100% !important;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+      }
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+      .p-image {
+        top: 95px;
+        right: 38%;
+        color: #666666;
+        position: absolute;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .p-image:hover {
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .upload-button {
+        font-size: 1.2em;
       }
 
-      .history ul {
-        padding-left: 0;
-        margin-top: 20px;
-      }
-
-      .history ul li {
-        padding: 5px 0;
-        border-bottom: 1px solid #fff;
-      }
-
-      .history ul li:first-child {
-        border-top: 1px solid #fff;
+      .upload-button:hover {
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        color: #999;
       }
     </style>
   </head>
   <body>
-    <!-- <div class="row">
-      <div class="small-12 medium-2 large-2 columns">
-        <div class="circle">
-          <img
-            class="profile-pic"
-            src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-          />
+    <!------ header ------>
+    <nav>
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <img src="./img/logo.png" alt="" />
+          <button class="nav-toggle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              width="24px"
+            >
+              <path
+                fill="#00fbfb"
+                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </button>
         </div>
-        <div class="p-image">
-          <i class="fa fa-camera upload-button"></i>
-          <input class="file-upload" type="file" accept="image/*" />
-        </div>
+
+        <!-- links -->
+        <ul class="links">
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Về Kolin</a></li>
+          <li><a href="#">Khóa học</a></li>
+          <li><a href="#">Thư viện tài liệu</a></li>
+          <li><a href="#">Kiến thức</a></li>
+        </ul>
       </div>
-    </div> -->
+    </nav>
+
     <div class="profile-page">
       <div class="max-width mx-auto">
         <div class="profile-container">
           <div class="row">
             <div class="col-4 text-center">
-              <!-- <div class="small-12 medium-2 large-2 columns">
+              <div class="relative">
                 <div class="circle">
                   <img
                     class="profile-pic"
@@ -169,17 +155,24 @@
                   />
                 </div>
                 <div class="p-image">
-                  <i class="fa fa-camera upload-button"></i>
+                  <div class="upload-button">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 512 512"
+                      width="20px"
+                      height="20px"
+                    >
+                      <path
+                        fill="#b9b9b9"
+                        d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 384c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z"
+                      />
+                    </svg>
+                  </div>
                   <input class="file-upload" type="file" accept="image/*" />
                 </div>
-              </div> -->
+              </div>
 
-              <img
-                class="profile-pic"
-                src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-              />
-
-              <h2 class="name-account my-4">Vũ Diệu Thúy</h2>
+              <h2 class="name-account my-4 secondary-color">Vũ Diệu Thúy</h2>
 
               <div class="btn-container d-flex flex-column">
                 <button class="tab-btn active" data-value=".info">
@@ -267,8 +260,8 @@
                           <div
                             class="content-text d-flex justify-content-between"
                           >
-                            <p>Livestream Master Online</p>
-                            <p class="secondary-color">Vào học</p>
+                            <p class="name">Livestream Master Online</p>
+                            <a class="link secondary-color">Vào học</a>
                           </div>
                         </div>
                       </div>
@@ -377,6 +370,56 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!------ footer ------>
+    <div class="footer">
+      <div class="footer-content">
+        <div class="row g-2">
+          <div class="col-xl-4 col-md-12">
+            <div class="p-3">
+              <h2>KOLIN ACADEMY</h2>
+              <br />
+              <p>
+                <strong>Địa chỉ: </strong> 110 Nguyễn Hy Quang, Ô Chợ Dừa, Đống
+                Đa, Hà Nội'
+              </p>
+              <strong>Hotline: </strong>
+              0961.866.955
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-12">
+            <div class="p-3">
+              <h2>KHÓA HỌC</h2>
+              <br />
+              <p>‣ Brand Master</p>
+              <p>‣ Personal brand pro</p>
+              <p>‣ Pose</p>
+              <p>‣ Livestream Master</p>
+              <p>‣ Thần Thái - Khí Chất</p>
+              <p>‣ Tiktok idol</p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-12">
+            <div class="p-3">
+              <h2>THÔNG TIN LIÊN HỆ</h2>
+              <br />
+              <p>‣ Về Kolin</p>
+              <p>‣ Khóa học</p>
+              <p>‣ Thư viện tài liệu</p>
+              <p>‣ Kiến thức</p>
+            </div>
+          </div>
+        </div>
+        <div class="row g-2">
+          <div class="col-12">
+            <div class="p-3">
+              <p>© 2022KOLIN ACADEMY</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./img/footer.png" alt="decor-footer" />
     </div>
 
     <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->

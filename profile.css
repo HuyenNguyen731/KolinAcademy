@@ -1,0 +1,123 @@
+.profile-pic {
+  width: 200px;
+  max-height: 200px;
+  display: inline-block;
+}
+
+.file-upload {
+  display: none;
+}
+.circle {
+  width: 128px;
+  height: 128px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 100% !important;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+.p-image {
+  top: 95px;
+  right: 38%;
+  color: #666666;
+  position: absolute;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.p-image:hover {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.upload-button {
+  font-size: 1.2em;
+}
+
+.upload-button:hover {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: #999;
+}
+
+/* tabs */
+.about {
+  display: block;
+}
+
+.tab-btn {
+  color: var(--primary-color);
+  background: transparent;
+  font-size: 16px;
+  padding: 3px 15px;
+  transition: var(--transition);
+  border: none;
+  text-align: left;
+  border-bottom: 1px solid var(--white-color);
+}
+
+.tab-btn:hover:not(.active) {
+  color: var(--secondary-color);
+}
+
+.active {
+  color: var(--secondary-color);
+}
+
+.about-content .content:not(:first-of-type) {
+  display: none;
+}
+
+.profile-container {
+  padding: 100px;
+}
+
+.btn-container,
+.about-content {
+  padding: 0 20px;
+}
+
+.btn-primary {
+  padding: 6px 20px;
+  border-radius: 20px;
+  border-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+}
+
+.form-control {
+  border-radius: 0.5rem;
+}
+
+.info .btn-primary:hover {
+  opacity: 0.8;
+  border-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+}
+
+/* content your course */
+.course-item {
+  margin-bottom: 30px;
+}
+
+.course-item .content {
+  margin-bottom: 30px;
+}
+
+.course-item h3 {
+  margin-bottom: 20px;
+}
+.course-item .content-text {
+  margin-top: 10px;
+}
+
+.history ul {
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.history ul li {
+  padding: 5px 0;
+  border-bottom: 1px solid #fff;
+}
+
+.history ul li:first-child {
+  border-top: 1px solid #fff;
+}

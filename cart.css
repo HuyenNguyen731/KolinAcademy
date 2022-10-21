@@ -33,6 +33,11 @@
   background-color: var(--secondary-color);
 }
 
+.cart-container .btn-pay:hover {
+  opacity: 0.9;
+  transition: var(--transition);
+}
+
 .cart-container p {
   display: inline-block;
   position: relative;
@@ -46,10 +51,20 @@
   left: 0;
   height: 3px;
   width: 30%;
-  background-color: var(--secondary-color);
+  background-color: #ef532b;
   transition: width linear 0.3s;
 }
 
 .cart-container p:hover::after {
   width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  .cart-container .title {
+    padding: 20px;
+  }
+
+  .list-products {
+    padding: 6px;
+  }
 }
