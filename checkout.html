@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check out</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      .checkout-page {
+        padding: 60px 140px;
+      }
+
+      .checkout-page .title {
+        font-size: 28px;
+        margin-bottom: 2rem;
+      }
+
+      .form-wrapper {
+        padding: 6px;
+        border-radius: 8px;
+        border: 1px solid #c9c8c8;
+        margin-bottom: 10px;
+      }
+
+      .form-check-label {
+        font-weight: 300;
+      }
+
+      .form-check-input {
+        border: 1px solid #c9c8c8;
+        background-color: transparent;
+      }
+
+      .checkout-page .text {
+        margin-bottom: 15px;
+      }
+
+      .checkout-page button {
+        border-radius: 8px;
+        padding: 3px 14px;
+        color: var(--white-color);
+        background-color: var(--secondary-color);
+      }
+
+      .divider {
+        height: 1px;
+        width: 100%;
+        background-color: var(--white-color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="checkout-page max-width mx-auto">
+      <div class="title secondary-color">CHECK OUT</div>
+      <div class="checkout-wrapper">
+        <div class="row gx-5">
+          <div class="col">
+            <p class="text">Phương thức thanh toán</p>
+            <div class="form-wrapper">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="visa"
+                  id="visa1"
+                />
+                <label class="form-check-label" for="visa1"> Visa </label>
+              </div>
+            </div>
+            <div class="form-wrapper">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="vnpay"
+                  id="vnpay2"
+                />
+                <label class="form-check-label" for="vnpay2"> VnPay </label>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <p class="text">Tổng tiền</p>
+            <div class="d-flex justify-content-between mb-1">
+              <p>Giá gốc</p>
+              <p>4.000.000 vnd</p>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <p>Giá giảm</p>
+              <p>15%</p>
+            </div>
+            <div class="divider mb-3"></div>
+            <div class="d-flex justify-content-between mb-4">
+              <p>Tổng tiền</p>
+              <p class="secondary-color">3.500.000 vnd</p>
+            </div>
+
+            <div class="d-flex justify-content-end">
+              <button>Thanh toán</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
