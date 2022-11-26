@@ -514,3 +514,291 @@ button a:hover {
 .footer .logo {
   width: 70%;
 }
+
+@media only screen and (max-width: 1160px) {
+  .information {
+    padding: 0 20px;
+  }
+
+  button {
+    font-size: 30px;
+    padding: 10px 48px;
+  }
+
+  .five-truths .box-title {
+    flex-direction: column;
+  }
+
+  .five-truths .content {
+    padding: 1rem;
+    font-size: 16px;
+  }
+
+  .box-text-quote {
+    margin: 0 20px;
+    font-size: 16px;
+    padding: 3rem 1rem 1rem;
+  }
+
+  .icon-quote {
+    top: -22%;
+    width: 12%;
+  }
+
+  .meeting-content {
+    margin-top: 13rem;
+    padding: 0 20px;
+  }
+
+  .meeting-content .title {
+    font-size: 32px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .meeting-content .box {
+    font-size: 16px;
+    padding: 1rem 1rem 3rem;
+  }
+
+  .meeting-content .sub-box {
+    margin: 1rem 1rem 0;
+    border-left: 5px solid var(--green-color);
+    padding-left: 1rem;
+  }
+
+  .benefit {
+    padding: 0 20px;
+  }
+
+  .benefit .title img {
+    width: 80%;
+  }
+
+  .benefit-item {
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 16px;
+  }
+
+  .benefit-item .number {
+    font-size: 80px;
+    margin-right: 0;
+  }
+
+  .participant div:nth-child(2) div:nth-child(2) {
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  .participant .title {
+    margin-bottom: 0;
+  }
+
+  .participant .title img,
+  .infor-course .title img,
+  .form-register .title img,
+  .sale-off .title img {
+    width: 80%;
+  }
+
+  .participant-item {
+    width: 320px;
+    height: 320px;
+  }
+
+  .participant-item .box {
+    padding: 0 2rem;
+  }
+
+  .participant-item.item_1 {
+    bottom: 0;
+    margin-bottom: 2rem;
+  }
+
+  .participant-item.item_2 {
+    right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .participant-item.item_3 {
+    left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .infor-course {
+    padding: 0 20px;
+  }
+
+  .infor-course .maps .box {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+
+  .infor-course .maps-img img {
+    width: 100%;
+  }
+
+  .tickets .box {
+    width: 320px;
+    font-size: 16px;
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+
+  .infor-address .box {
+    flex-direction: column;
+  }
+
+  .infor-address .box .text {
+    font-size: 16px;
+  }
+
+  .infor-address .box img {
+    width: 22px;
+  }
+
+  .infor-address .box > div {
+    padding: 0;
+    width: 100%;
+  }
+
+  .reason .box {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 1rem 1rem 1rem 4rem;
+  }
+
+  .reason .box .number {
+    font-size: 42px;
+    margin-right: 1rem;
+  }
+
+  .result .box {
+    font-size: 18px;
+  }
+
+  .five-truths .box-title {
+    padding: 1rem;
+  }
+
+  .five-truths .box-title .title-text {
+    font-size: 16px;
+  }
+
+  .five-truths .box-title .number {
+    font-size: 80px;
+  }
+
+  .tickets div:nth-child(1) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-submit {
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .form-submit input,
+  .form-submit select {
+    margin-top: 1rem;
+    font-size: 16px;
+    min-height: 44px;
+  }
+
+  .sale-off .box {
+    min-width: auto;
+    font-size: 16px;
+  }
+
+  .sale-off .info-bank,
+  .sale-off .content-send {
+    font-size: 16px;
+  }
+
+  .footer {
+    font-size: 16px;
+    padding: 40px;
+  }
+
+  .footer div {
+    flex-direction: column;
+  }
+
+  .footer div .col-6,
+  .footer .logo {
+    width: 100%;
+  }
+
+  .footer div .col-6:nth-child(2) div {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .banner {
+    margin-bottom: 6rem;
+  }
+
+  .list-up .col-6 {
+    width: 100%;
+  }
+
+  .list-down {
+    top: 78% !important;
+    width: 100%;
+  }
+
+  .list-up .img-person1,
+  .list-up .img-person2 {
+    width: 90%;
+  }
+
+  .list-up .img-person2 {
+    left: -55%;
+  }
+
+  .list-up .img-person1 {
+    left: 60%;
+  }
+
+  .list-down .col-4 {
+    width: 100%;
+  }
+
+  .list-down .img-person {
+    width: 21%;
+  }
+
+  .list-down .col-4:nth-child(1) .img-person {
+    left: 22%;
+  }
+
+  .list-down .col-4:nth-child(2) .img-person {
+    left: 50%;
+  }
+
+  .list-down .col-4:nth-child(3) .img-person {
+    left: 78%;
+  }
+
+  .meeting-content {
+    margin-top: 40rem;
+  }
+
+  .benefit .title img,
+  .participant .title img,
+  .infor-course .title img,
+  .form-register .title img,
+  .sale-off .title img {
+    width: 90%;
+  }
+
+  .icon-quote {
+    top: -4%;
+  }
+}
