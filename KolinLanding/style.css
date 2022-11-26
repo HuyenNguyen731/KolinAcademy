@@ -70,6 +70,16 @@ body {
   margin: 0 auto;
 }
 
+.landing-page {
+  z-index: 1;
+}
+
+.landing-page .decor-body {
+  z-index: -1;
+  width: 100%;
+  height: -webkit-fill-available;
+}
+
 /* banner */
 .bg-banner {
   top: 0;
