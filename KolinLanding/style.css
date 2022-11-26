@@ -1,0 +1,495 @@
+:root {
+  --primary-color: rgb(0, 251, 251);
+  --secondary-color: #bc1ea1;
+  --white-color: #f1f1f1;
+  --black-color: #000;
+  --green-color: #21f4b5;
+  --transition: 0.3s all linear;
+  --background-color: #1f0c5b;
+  --font-family: "HelveticaNeue";
+}
+
+* {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "HelveticaNeue";
+  src: url(./font/helveticaneue_0.ttf);
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: "HelveticaNeue";
+  src: url(./font/helveticaneuebold.ttf);
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: "HelveticaNeue";
+  src: url(./font/helveticaneuelight.ttf);
+}
+
+@font-face {
+  font-weight: 800;
+  font-family: "HelveticaNeue";
+  src: url(./font/helveticaneuecondensedblack.ttf);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  box-sizing: border-box;
+  color: var(--white-color);
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.max-width {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* banner */
+.bg-banner {
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.text-banner {
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wrapper-person {
+  top: 38%;
+}
+
+.list-up {
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 280px);
+}
+
+.list-up .img-person1 {
+  left: 50%;
+  width: 47%;
+}
+
+.list-up .img-person2 {
+  left: 15%;
+  width: 47%;
+}
+
+.list-down {
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 280px);
+}
+
+.list-down .img-person {
+  width: 63%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* information */
+.information {
+  padding: 0 140px;
+}
+
+.infor-address .box {
+  margin: 0;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0px 0px 2px 2px rgba(0, 251, 251, 0.6);
+}
+
+.infor-address .box .text {
+  font-size: 30px;
+  margin-left: 1.5rem;
+  font-weight: 600;
+}
+
+.infor-address .box span {
+  font-weight: 400;
+}
+
+/* result */
+.result .box {
+  font-size: 32px;
+  padding: 30px 25px;
+  font-weight: 300;
+  border-radius: 18px;
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0px 0px 2px 2px rgba(188, 30, 161, 0.6);
+}
+
+/* five-truths */
+
+.five-truths {
+  margin-top: 2rem;
+  border-radius: 18px;
+  border: 5px solid var(--secondary-color);
+  box-shadow: 0px 0px 4px 4px rgba(188, 30, 161, 0.6);
+}
+
+.five-truths .box-title {
+  border-radius: 18px;
+  box-shadow: 0px 0px 4px 4px rgba(143, 143, 143, 0.6);
+  background-color: var(--secondary-color);
+  padding: 2rem 2rem 2rem 4rem;
+}
+
+.five-truths .box-title .number {
+  font-size: 140px;
+  font-weight: 800;
+  margin-right: 3rem;
+  color: var(--green-color);
+  line-height: 110%;
+}
+
+.five-truths .box-title .title-text {
+  font-size: 30px;
+}
+
+.five-truths .title-text .title-text-up {
+  font-weight: 600;
+}
+
+.five-truths .title-text .title-text-down {
+  font-weight: 300;
+  font-style: italic;
+  color: #dedce7;
+}
+
+.five-truths .content {
+  padding: 3rem 5rem;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 30px;
+  color: #dedce7;
+}
+
+.five-truths .content div {
+  margin-bottom: 1rem;
+}
+
+.five-truths .content img {
+  margin-right: 0.5rem;
+}
+
+button {
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  padding: 15px 65px;
+  margin: 2rem 0;
+  border-radius: 50px;
+  color: var(--white-color);
+  border: 1px solid var(--white-color);
+  box-shadow: 0px 4px 4px 0 rgba(149, 149, 149, 0.6);
+  background-image: linear-gradient(to right, #f565ff, #d6432a);
+}
+
+/* quote */
+.box-text-quote {
+  top: 75%;
+  margin: 0 140px;
+  font-style: italic;
+  font-size: 30px;
+  border-radius: 18px;
+  padding: 6rem 5rem 4rem;
+  border: 5px solid var(--secondary-color);
+  box-shadow: 0px 0px 4px 4px rgb(188 30 161 / 60%);
+}
+
+.icon-quote {
+  top: -10%;
+  width: 15%;
+}
+
+.box-text-quote p {
+  margin-bottom: 2rem;
+}
+
+/* reason */
+.reason {
+  margin: 5rem 0 3rem 15px;
+}
+
+.reason .box {
+  font-size: 30px;
+  margin: 2rem 0;
+  min-height: 110px;
+  border-radius: 20px;
+  color: var(--black-color);
+  padding: 1rem 1rem 1rem 6rem;
+  background: var(--white-color);
+}
+
+.reason .back {
+  top: 10%;
+  z-index: -1;
+  left: -15px;
+}
+
+.reason .decor {
+  left: -15px;
+}
+
+.reason .box .number {
+  font-size: 58px;
+  line-height: 120%;
+  margin-right: 2rem;
+  font-weight: 800;
+  color: var(--secondary-color);
+}
+
+.reason .box .text {
+  font-weight: 600;
+}
+
+/* meeting-content */
+.meeting-content {
+  margin-top: 30rem;
+  padding: 0 140px;
+}
+
+.meeting-content .box {
+  padding: 1rem 4rem 4rem;
+  font-size: 30px;
+  border-radius: 18px;
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+.meeting-content .title {
+  font-size: 68px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 1.2px;
+  color: var(--secondary-color);
+}
+
+.meeting-content .sub-box {
+  border-left: 10px solid var(--green-color);
+  padding-left: 1.5rem;
+  margin: 1rem 2rem 0;
+}
+
+.meeting-content .box .decor {
+  left: -15px;
+  z-index: 1;
+}
+
+.meeting-content .back {
+  left: -15px;
+  z-index: -1;
+  top: 10px;
+}
+
+/* benefit */
+.benefit {
+  padding: 0 140px;
+}
+
+.benefit-item {
+  font-size: 30px;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 5px solid var(--secondary-color);
+  box-shadow: 0px 0px 2px 2px rgb(188 30 161 / 60%);
+}
+
+.benefit-item .number {
+  font-size: 120px;
+  color: var(--green-color);
+  font-weight: 800;
+  line-height: 120%;
+  margin-right: 3rem;
+}
+
+.benefit-item .text {
+  color: #dedce7;
+}
+
+/* participant */
+.participant .title {
+  margin-bottom: -4rem;
+}
+
+.participant-item {
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 3px solid var(--secondary-color);
+  box-shadow: 0px 0px 2px 2px rgb(188 30 161 / 60%);
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+.participant-item .box {
+  padding: 0 4rem;
+  width: 100%;
+  height: 100%;
+  font-size: 26px;
+  margin-top: -4rem;
+}
+
+.participant-item .box .number {
+  font-size: 80px;
+  font-weight: 800;
+  color: var(--green-color);
+}
+
+.participant-item.item_1 {
+  margin: 0 auto;
+  bottom: -120px;
+}
+.participant-item.item_2 {
+  right: -15px;
+}
+
+.participant-item.item_3 {
+  left: -15px;
+}
+
+/* information course */
+
+.infor-course {
+  padding: 0 140px;
+}
+
+.infor-course .maps {
+  max-width: 640px;
+  margin: 4rem auto;
+}
+
+.infor-course .maps .box {
+  font-size: 38px;
+  padding: 10px 26px;
+  border-radius: 14px;
+  border: 3px solid var(--secondary-color);
+  box-shadow: 0px 0px 4px 4px rgba(188, 30, 161, 60%);
+}
+
+.infor-course .maps .box:nth-child(2) {
+  border: 2px solid var(--primary-color);
+  box-shadow: 0px 0px 2px 2px rgba(0, 251, 251, 60%);
+}
+
+.infor-course .maps-img {
+  margin-top: 2rem;
+}
+
+/* tickets */
+.tickets .box {
+  width: 445px;
+  font-size: 28px;
+  min-height: 343px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0px 0px 4px 4px rgba(0, 251, 251, 60%);
+}
+
+/* form-submit */
+.form-submit {
+  padding: 20px 40px;
+  border-radius: 30px;
+  margin: 0 auto;
+  max-width: calc(100% - 100px);
+  background-color: var(--white-color);
+}
+
+.form-submit input,
+.form-submit select {
+  width: 100%;
+  font-size: 28px;
+  margin-top: 2rem;
+  padding: 5px 10px;
+  outline: none;
+  min-height: 56px;
+}
+
+.form-submit select {
+  color: #757576;
+}
+
+.form-submit select option:first {
+  color: #999;
+}
+
+/* sale-off */
+.sale-off .box {
+  color: var(--green-color);
+  padding: 20px;
+  min-width: 280px;
+  font-size: 50px;
+  font-weight: 600;
+  border-radius: 18px;
+  margin: 30px 0;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0px 0px 4px 4px rgba(0, 251, 251, 60%);
+}
+
+.sale-off .info-bank,
+.sale-off .content-send {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.sale-off .info-bank strong {
+  font-weight: 600;
+}
+/* footer */
+.footer {
+  font-size: 30px;
+  padding: 4rem;
+  background-color: #2b388f;
+}
+
+.footer .text {
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.footer span {
+  font-weight: 600;
+}
+
+.footer p {
+  margin-left: 4rem;
+  font-weight: 300;
+}
+
+.footer .logo {
+  width: 70%;
+}
