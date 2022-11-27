@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Free</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      .course-free {
+        padding: 50px 100px 0;
+      }
+
+      .course-free .left-course {
+        width: 100%;
+        max-width: 30%;
+        padding-right: 2rem;
+        border-right: 1px solid var(--white-color);
+      }
+
+      .course-free .left-course .heading {
+        font-size: 34px;
+        margin-bottom: 2rem;
+      }
+
+      .course-free .lesson-item {
+        font-size: 16px;
+        margin-bottom: 1.5rem;
+      }
+
+      .course-free .lesson-item .title-lesson {
+        font-size: 18px;
+      }
+
+      .course-free .right-course {
+        width: 100%;
+        max-width: 70%;
+        padding-left: 3rem;
+      }
+
+      .course-free .name-course {
+        font-size: 30px;
+        margin-bottom: 2rem;
+      }
+
+      .course-free .video iframe {
+        width: 100%;
+        height: 450px;
+      }
+
+      .course-free .status {
+        padding: 20px;
+        margin: 2rem 0;
+        font-size: 20px;
+        border-radius: 30px;
+        background-image: linear-gradient(to right, #340a65, #000260);
+      }
+
+      .course-free .status .box div:nth-child(1) {
+        margin-bottom: 1rem;
+      }
+
+      .course-free .status .box:nth-child(2) {
+        padding: 0 3rem;
+        border-left: 1px solid var(--white-color);
+        border-right: 1px solid var(--white-color);
+      }
+
+      .course-free .btn-status {
+        padding: 8px 15px;
+        border-radius: 30px;
+        text-transform: uppercase;
+        color: var(--secondary-color);
+        background-color: var(--white-color);
+      }
+
+      .course-free .btn-login {
+        display: block;
+        min-width: 200px;
+        padding: 8px 15px;
+        border-radius: 30px;
+        text-transform: uppercase;
+        color: var(--white-color);
+        transition: var(--transition);
+        background-color: var(--secondary-color);
+      }
+
+      .course-free .btn-login:hover {
+        opacity: 0.7;
+        color: var(--white-color);
+      }
+
+      .course-free .list-content button::before {
+        content: "";
+        position: relative;
+        width: 16px;
+        height: 16px;
+        margin-right: 0.8rem;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: var(--white-color);
+      }
+
+      .course-free .list-content button {
+        position: relative;
+        width: 100%;
+        padding: 15px 25px;
+        font-size: 16px;
+        text-align: left;
+        margin-bottom: 1rem;
+        border-radius: 50px;
+        background: transparent;
+        color: var(--white-color);
+        border: 1px solid var(--white-color);
+        line-height: 140%;
+        max-height: 5rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        transition: var(--transition);
+      }
+
+      .course-free .list-content button:hover {
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <nav>
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <img src="./img/logo.png" alt="" />
+          <button class="nav-toggle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              width="24px"
+            >
+              <path
+                fill="#00fbfb"
+                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- links -->
+        <ul class="links">
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Về Kolin</a></li>
+          <li><a href="#">Khóa học</a></li>
+          <li><a href="#">Thư viện tài liệu</a></li>
+          <li><a href="#">Kiến thức</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- course free -->
+    <div class="course-free max-width mx-auto">
+      <div class="d-flex justify-content-end">
+        <div class="left-course">
+          <div class="heading">Danh sách bài học</div>
+          <div class="list-lesson">
+            <div class="lesson-item">
+              <div class="title-lesson">Speed Up To Win Buổi 1:</div>
+              <div class="name-lesson">
+                Khởi Đầu Kinh Doanh Online Chuyên Nghiệp
+              </div>
+            </div>
+            <div class="lesson-item">
+              <div class="title-lesson">Speed Up To Win Buổi 2:</div>
+              <div class="name-lesson">
+                Digital Marketing – Marketing Đa Kênh – Xây Dựng Nội Dung Viral
+              </div>
+            </div>
+            <div class="lesson-item">
+              <div class="title-lesson">Speed Up To Win Buổi 3:</div>
+              <div class="name-lesson">Chiến lược bán hàng đỉnh cao</div>
+            </div>
+          </div>
+        </div>
+        <div class="right-course">
+          <div class="name-course text-center secondary-color">
+            KHOÁ HỌC SPEED UP TO WIN
+          </div>
+          <div class="video">
+            <iframe
+              width="420"
+              height="345"
+              src="https://www.youtube.com/embed/"
+            >
+            </iframe>
+          </div>
+          <div class="status">
+            <div class="d-flex justify-content-around">
+              <div class="box text-center">
+                <div>Trạng thái</div>
+                <div class="btn-status">Chưa đăng nhập</div>
+              </div>
+              <div
+                class="box text-center d-flex flex-column justify-content-between"
+              >
+                <div>Giá khóa học</div>
+                <div class="secondary-color">Miễn phí</div>
+              </div>
+              <div class="box text-center">
+                <div>Bắt đầu học</div>
+                <a class="btn-login" href="#"> Đăng nhập</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="list-content">
+            <button>
+              Speed Up To Win Buổi 1: Khởi Đầu Kinh Doanh Online Chuyên Nghiệp
+            </button>
+            <button>
+              Speed Up To Win Buổi 1: Khởi Đầu Kinh Doanh Online Chuyên Nghiệp
+            </button>
+            <button>
+              Speed Up To Win Buổi 1: Khởi Đầu Kinh Doanh Online Chuyên Nghiệp
+            </button>
+            <button>
+              Speed Up To Win Buổi 1: Khởi Đầu Kinh Doanh Online Chuyên Nghiệp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+      <div class="footer-content">
+        <div class="row g-2">
+          <div class="col-xl-4 col-md-12">
+            <div class="p-3">
+              <h2>KOLIN ACADEMY</h2>
+              <br />
+              <p>
+                <strong>Địa chỉ: </strong> 110 Nguyễn Hy Quang, Ô Chợ Dừa, Đống
+                Đa, Hà Nội'
+              </p>
+              <strong>Hotline: </strong>
+              0961.866.955
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-12">
+            <div class="p-3">
+              <h2>KHÓA HỌC</h2>
+              <br />
+              <p>‣ Brand Master</p>
+              <p>‣ Personal brand pro</p>
+              <p>‣ Pose</p>
+              <p>‣ Livestream Master</p>
+              <p>‣ Thần Thái - Khí Chất</p>
+              <p>‣ Tiktok idol</p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-12">
+            <div class="p-3">
+              <h2>THÔNG TIN LIÊN HỆ</h2>
+              <br />
+              <p>‣ Về Kolin</p>
+              <p>‣ Khóa học</p>
+              <p>‣ Thư viện tài liệu</p>
+              <p>‣ Kiến thức</p>
+            </div>
+          </div>
+        </div>
+        <div class="row g-2">
+          <div class="col-12">
+            <div class="p-3">
+              <p>© 2022KOLIN ACADEMY</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./img/footer.png" alt="decor-footer" />
+    </div>
+  </body>
+</html>
