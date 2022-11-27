@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      .document-page {
+        padding: 60px 140px;
+      }
+
+      .document-page .title {
+        font-size: 28px;
+        position: relative;
+        margin-bottom: 2rem;
+      }
+
+      .document-page .title::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        bottom: 0;
+        width: 60px;
+        background-color: var(--secondary-color);
+      }
+
+      .document-page .box-item {
+        padding: 2rem;
+        border-radius: 30px;
+        background-image: linear-gradient(to right, #340a65, #000260);
+      }
+
+      .document-page .box-item p {
+        text-align: right;
+        font-size: 25px;
+      }
+
+      .document-page .box-item .heading {
+        position: relative;
+        font-size: 28px;
+        line-height: 140%;
+        max-height: 5rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        margin-bottom: 2rem;
+      }
+
+      .document-page .box-item .line::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -18px;
+        height: 3px;
+        width: 60px;
+        background-color: var(--secondary-color);
+      }
+
+      @media only screen and (max-width: 767px) {
+        .document-page {
+          padding: 40px 20px;
+        }
+
+        .document-page .box-item .heading {
+          font-size: 22px;
+        }
+
+        .document-page .box-item p {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="document-page max-width mx-auto">
+      <div class="title secondary-color text-center">TÀI LIỆU</div>
+      <div class="document-content">
+        <div class="row g-5">
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="box-item">
+              <div class="line relative">
+                <div class="heading">
+                  7 BƯỚC HƯỚNG DẪN NGƯỜI MỚI KINH DOANH THÀNH CÔNG
+                </div>
+              </div>
+              <p class="primary-color">Nhận tài liệu‣‣</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="box-item">
+              <div class="line relative">
+                <div class="heading">
+                  7 BƯỚC HƯỚNG DẪN NGƯỜI MỚI KINH DOANH THÀNH CÔNG
+                </div>
+              </div>
+              <p class="primary-color">Nhận tài liệu‣‣</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="box-item">
+              <div class="line relative">
+                <div class="heading">
+                  7 BƯỚC HƯỚNG DẪN NGƯỜI MỚI KINH DOANH THÀNH CÔNG
+                </div>
+              </div>
+              <p class="primary-color">Nhận tài liệu‣‣</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="box-item">
+              <div class="line relative">
+                <div class="heading">
+                  7 BƯỚC HƯỚNG DẪN NGƯỜI MỚI KINH DOANH THÀNH CÔNG
+                </div>
+              </div>
+              <p class="primary-color">Nhận tài liệu‣‣</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
