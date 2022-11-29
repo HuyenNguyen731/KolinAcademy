@@ -22,7 +22,7 @@
         margin-bottom: 2rem;
       }
 
-      .brand-page .box {
+      .brand-page .guide .box {
         padding: 15px;
         border-radius: 20px;
         border: 1px solid var(--primary-color);
@@ -45,10 +45,10 @@
 
       .brand-page .benefit-item {
         max-width: 410px;
-        /* min-height: 70px; */
+        min-height: 70px;
         width: 100%;
         margin: 0 5px 15px;
-        display: inline-flex;
+        display: inline-table;
         align-items: center;
         justify-content: center;
         padding: 10px;
@@ -58,7 +58,8 @@
 
       /* lecture */
       .brand-page .lecture img {
-        width: 700px;
+        max-width: 700px;
+        width: 100%;
       }
 
       /* course-for */
@@ -109,6 +110,7 @@
         border-radius: 30px;
         font-size: 24px;
         min-width: 450px;
+        width: 100%;
         margin-right: 2rem;
       }
 
@@ -120,6 +122,28 @@
         color: var(--white-color);
         background-color: var(--secondary-color);
       }
+
+      @media only screen and (max-width: 1160px) {
+        .brand-page .guide .box {
+          margin-bottom: 1rem;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .brand-page section {
+          margin: 4rem 20px;
+        }
+
+        .form button {
+          font-size: 20px;
+          min-width: 300px;
+          margin: 0 0 1rem 0;
+        }
+
+        .feedback .video iframe {
+          height: 240px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -130,7 +154,7 @@
       <section class="guide">
         <div class="title primary-color text-center">LỘ TRÌNH KHÓA HỌC</div>
         <div class="row">
-          <div class="col-4">
+          <div class="col-lg-4 col-md-12 col-12">
             <div class="box">
               <div class="day secondary-color">Ngày 1</div>
               <ul>
@@ -145,7 +169,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-lg-4 col-md-12 col-12">
             <div class="box">
               <div class="day secondary-color">Ngày 2</div>
               <ul>
@@ -156,7 +180,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-lg-4 col-md-12 col-12">
             <div class="box">
               <div class="day secondary-color">Ngày 3</div>
               <ul>
@@ -203,25 +227,25 @@
       <section class="course-for">
         <div class="title primary-color text-center">KHÓA HỌC DÀNH CHO</div>
         <div class="row g-4">
-          <div class="col-3">
+          <div class="col-lg-3 col-md-6 col-12">
             <div class="box">
               Những ai đang có ý định xây dựng thương hiệu cá nhân một cách
               chuyên nghiệp
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-lg-3 col-md-6 col-12">
             <div class="box">
               Mong muốn thay đổi, nâng cấp bản thân phục vụ công việc, kinh
               doanh
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-lg-3 col-md-6 col-12">
             <div class="box">
               Những ai đang có ý định xây dựng thương hiệu cá nhân một cách
               chuyên nghiệp
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-lg-3 col-md-6 col-12">
             <div class="box">
               Mong muốn thay đổi, nâng cấp bản thân phục vụ công việc, kinh
               doanh
@@ -233,7 +257,7 @@
       <section class="feedback">
         <div class="title primary-color text-center">FEEDBACK HỌC VIÊN</div>
         <div class="row g-5">
-          <div class="col-6">
+          <div class="col-lg-6 col-md-6 col-12">
             <div class="feedback-item">
               <div class="name-student">HỌC VIÊN: LAN ANH</div>
               <div class="video">
@@ -246,7 +270,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-lg-6 col-md-6 col-12">
             <div class="feedback-item">
               <div class="name-student">HỌC VIÊN: LAN ANH</div>
               <div class="video">
