@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form đăng kí khóa học</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      .form-register {
+        z-index: 1;
+        height: 100vh;
+      }
+
+      .bg-form {
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+      }
+
+      .wrapper-form {
+        height: 100%;
+        align-items: center;
+      }
+
+      .form-register .heading {
+        font-size: 34px;
+        margin-bottom: 2rem;
+      }
+
+      .form-control {
+        font-size: 18px;
+        min-width: 500px;
+        border-radius: 10px;
+      }
+
+      form .btn {
+        border-radius: 10px;
+        font-size: 18px;
+        min-width: 150px;
+        color: var(--white-color);
+        background-color: var(--secondary-color);
+      }
+
+      form .btn:hover {
+        opacity: 0.9;
+        color: var(--white-color);
+        background-color: var(--secondary-color);
+      }
+
+      @media only screen and (max-width: 768px) {
+        .form-register .heading {
+          font-size: 22px;
+        }
+
+        .form-control {
+          font-size: 16px;
+          min-width: 300px;
+        }
+
+        form .btn {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!------ header ------>
+    <nav>
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <img src="./img/logo.png" alt="" />
+          <button class="nav-toggle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              width="24px"
+            >
+              <path
+                fill="#00fbfb"
+                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- links -->
+        <ul class="links">
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Về Kolin</a></li>
+          <li><a href="#">Khóa học</a></li>
+          <li><a href="#">Thư viện tài liệu</a></li>
+          <li><a href="#">Kiến thức</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="form-register relative">
+      <div class="wrapper-form d-flex flex-column justify-content-center">
+        <div class="heading primary-color">ĐĂNG KÝ KHÓA HỌC</div>
+        <form action="" class="text-center">
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Họ và tên" />
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="email"
+              class="form-control"
+              aria-describedby="emailHelp"
+              placeholder="email"
+            />
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="phone"
+              class="form-control"
+              placeholder="Số điện thoại"
+            />
+          </div>
+
+          <div class="mb-3">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Số lượng học viên"
+            />
+          </div>
+
+          <select class="mb-3 form-control" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+
+          <div class="mb-3">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Số lượng học viên"
+            />
+          </div>
+
+          <br />
+          <button type="submit" class="btn">Đăng ký</button>
+        </form>
+      </div>
+      <img src="./img/bg-form.png" alt="" class="bg-form absolute" />
+    </div>
+
+    <!------ footer ------>
+    <div class="footer">
+      <div class="footer-content">
+        <div class="row g-2">
+          <div class="col-xl-4 col-md-12">
+            <div class="p-3">
+              <h2>KOLIN ACADEMY</h2>
+              <br />
+              <p>
+                <strong>Địa chỉ: </strong> 110 Nguyễn Hy Quang, Ô Chợ Dừa, Đống
+                Đa, Hà Nội'
+              </p>
+              <strong>Hotline: </strong>
+              0961.866.955
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-12">
+            <div class="p-3">
+              <h2>KHÓA HỌC</h2>
+              <br />
+              <p>‣ Brand Master</p>
+              <p>‣ Personal brand pro</p>
+              <p>‣ Pose</p>
+              <p>‣ Livestream Master</p>
+              <p>‣ Thần Thái - Khí Chất</p>
+              <p>‣ Tiktok idol</p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-12">
+            <div class="p-3">
+              <h2>THÔNG TIN LIÊN HỆ</h2>
+              <br />
+              <p>‣ Về Kolin</p>
+              <p>‣ Khóa học</p>
+              <p>‣ Thư viện tài liệu</p>
+              <p>‣ Kiến thức</p>
+            </div>
+          </div>
+        </div>
+        <div class="row g-2">
+          <div class="col-12">
+            <div class="p-3">
+              <p>© 2022KOLIN ACADEMY</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./img/footer.png" alt="decor-footer" />
+    </div>
+  </body>
+</html>
