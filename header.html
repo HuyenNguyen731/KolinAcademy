@@ -12,6 +12,43 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="main.css" />
+    <style>
+      .sub-nav {
+        position: absolute;
+        padding: 8px 5px;
+        top: cacl(100% + 20px);
+        display: none;
+        min-width: 180px;
+        margin-left: 10px;
+        background-color: #130d44;
+      }
+
+      .sub-nav li a {
+        display: block;
+        text-transform: none;
+      }
+
+      .links li {
+        position: relative;
+      }
+
+      .links li:hover .sub-nav {
+        display: block;
+      }
+
+      @media only screen and (max-width: 1160px) {
+        .sub-nav {
+          position: relative;
+          display: block;
+          padding: 0;
+          background-color: transparent;
+        }
+
+        .sub-nav li a {
+          padding: 8px 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <!------ header ------>
@@ -65,7 +102,13 @@
         <ul class="links">
           <li><a href="#">Trang chủ</a></li>
           <li><a href="#">Về Kolin</a></li>
-          <li><a href="#">Khóa học</a></li>
+          <li>
+            <a href="#">Khóa học</a>
+            <ul class="sub-nav">
+              <li><a href="">Online</a></li>
+              <li><a href="">Offline</a></li>
+            </ul>
+          </li>
           <li><a href="#">Thư viện tài liệu</a></li>
           <li><a href="#">Kiến thức</a></li>
           <li class="cart-mobile"><a href="#">Giỏ hàng</a></li>
