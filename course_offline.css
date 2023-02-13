@@ -1,26 +1,12 @@
-:root {
-  --primary-color: #00fbfb;
-  --secondary-color: #e300c8;
-  --white-color: #fff;
-  --black-color: #000;
-  --transition: 0.3s all linear;
-  --background-color: #0a0726;
-  --font-family: "HelveticaNeue";
-}
-
-.home-page section {
-  margin-bottom: 6rem;
-}
-
-.home-page {
+.offline-page {
   overflow: hidden;
 }
 
-.title {
+.offline-page .title {
   font-size: 32px;
 }
 
-iframe {
+.offline-page iframe {
   width: 100%;
   height: 100%;
   border-radius: 30px;
